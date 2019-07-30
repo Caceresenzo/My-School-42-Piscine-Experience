@@ -1,0 +1,185 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r11p21.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Tue Jul 30 17:20:57 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_shell_01/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmps4t_dn/user log --pretty='%H - %an, %ad : %s'
+a6468f1eae2d73b08cbe1c0f300c024507208f69 - Enzo CACERES, Tue Jul 30 13:57:11 2019 +0200 : ex08
+7e0b7350db0305d5e55617fae28600274bd028de - Enzo CACERES, Tue Jul 30 13:56:22 2019 +0200 : ex07
+7d8b7e5ae781ff5da9e06651efe37bf28e039476 - Enzo CACERES, Tue Jul 30 13:55:37 2019 +0200 : ex06
+ed5c9cbc74bc42033bf58e291833b6809cbf8c3e - Enzo CACERES, Tue Jul 30 13:54:52 2019 +0200 : ex05
+74c1482bb702fa42437d73581616210a1f968ecb - Enzo CACERES, Tue Jul 30 13:52:26 2019 +0200 : ex04
+bf5e0cd1073c9a45ed46d8466198642b0d8e5ebd - Enzo CACERES, Tue Jul 30 13:51:59 2019 +0200 : ex03
+5310d1225aa8b557f9ccb6afefafef9caae2d98f - Enzo CACERES, Tue Jul 30 13:48:27 2019 +0200 : ex02
+1be3e329c080ccf53a85f905d4a0a6c0b1783d20 - Enzo CACERES, Tue Jul 30 13:47:55 2019 +0200 : ex01
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmps4t_dn/user
+total 8
+-rw-r--r--  1 root  wheel  1629 Jul 30 17:20 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex01
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex02
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex03
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex04
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex05
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex06
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex07
+drwxr-xr-x  3 root  wheel   102 Jul 30 17:20 ex08
+
+/tmp/tmps4t_dn/user/ex01:
+total 8
+-rwxr-xr-x  1 root  wheel  44 Jul 30 17:20 print_groups.sh
+
+/tmp/tmps4t_dn/user/ex02:
+total 8
+-rwxr-xr-x  1 root  wheel  53 Jul 30 17:20 find_sh.sh
+
+/tmp/tmps4t_dn/user/ex03:
+total 8
+-rwxr-xr-x  1 root  wheel  37 Jul 30 17:20 count_files.sh
+
+/tmp/tmps4t_dn/user/ex04:
+total 8
+-rwxr-xr-x  1 root  wheel  47 Jul 30 17:20 MAC.sh
+
+/tmp/tmps4t_dn/user/ex05:
+total 8
+-rw-r--r--  1 root  wheel  2 Jul 30 17:20 "\?$*'MaRViN'*$?\"
+
+/tmp/tmps4t_dn/user/ex06:
+total 8
+-rwxr-xr-x  1 root  wheel  37 Jul 30 17:20 skip.sh
+
+/tmp/tmps4t_dn/user/ex07:
+total 8
+-rwxr-xr-x  1 root  wheel  324 Jul 30 17:20 r_dwssap.sh
+
+/tmp/tmps4t_dn/user/ex08:
+total 8
+-rwxr-xr-x  1 root  wheel  157 Jul 30 17:20 add_chelou.sh
+
+= ex01 =========================================================================
+===========
+testing
+nobody,everyone,localaccounts,com.apple.sharepoint.group.1,_lpoperator
+VS
+nobody,everyone,localaccounts,com.apple.sharepoint.group.1,_lpoperator
+===========
+< le notre, > le votre
+groups: noob: no such user
+id: noob: no such user
+===========
+testing
+
+VS
+
+===========
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex02 =========================================================================
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex03 =========================================================================
+< our file, > your file
+ok
+
+Grade: 10
+
+= ex04 =========================================================================
+===========
+testing
+10:dd:b1:a4:27:53
+ec:35:86:3b:f4:4e
+32:00:12:7e:0e:80
+32:00:12:7e:0e:81
+32:00:12:7e:0e:80
+0e:35:86:3b:f4:4e
+b6:9c:36:9f:11:57
+
+VS
+10:dd:b1:a4:27:53 
+ec:35:86:3b:f4:4e 
+32:00:12:7e:0e:80 
+32:00:12:7e:0e:81 
+32:00:12:7e:0e:80 
+0e:35:86:3b:f4:4e 
+b6:9c:36:9f:11:57 
+
+===========
+< le notre, > le votre
+1,7c1,7
+< 10:dd:b1:a4:27:53
+< ec:35:86:3b:f4:4e
+< 32:00:12:7e:0e:80
+< 32:00:12:7e:0e:81
+< 32:00:12:7e:0e:80
+< 0e:35:86:3b:f4:4e
+< b6:9c:36:9f:11:57
+---
+> 10:dd:b1:a4:27:53 
+> ec:35:86:3b:f4:4e 
+> 32:00:12:7e:0e:80 
+> 32:00:12:7e:0e:81 
+> 32:00:12:7e:0e:80 
+> 0e:35:86:3b:f4:4e 
+> b6:9c:36:9f:11:57 
+
+KO
+
+
+Grade: 0
+
+= ex05 =========================================================================
+-rw-r--r--  1 deepthought  deepthought  2 Jul 30 15:21 "\?$*'MaRViN'*$?\"
+OK
+
+Grade: 15
+
+= ex06 =========================================================================
+ok
+
+Grade: 15
+
+= ex07 =========================================================================
+< our file, > your file
+< our file, > your file
+1c1
+< rgmecived_, revreswodniw_, revressta_, rednopsersndm_, rebbaj_, radnelac_, pl_, pcuu_, nwonknu_, nimdak_brk_, nimda_nimdak_, namliam_.
+\ No newline at end of file
+---
+> rgmecived_, revreswodniw_, revressta_, rednopsersndm_, rebbaj_, radnelac_, pl_, pcuu_, nwonknu_, nimda_nimdak_, nimdak_brk_, namliam_.
+\ No newline at end of file
+KO with 13 and 24
+
+Grade: 0
+
+= ex08 =========================================================================
+OK
+
+Grade: 15
+
+= Final grade: 30 ==============================================================
