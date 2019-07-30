@@ -1,0 +1,5 @@
+Credentials cache: API:39ED720B-05B8-4D03-9243-91C9B6217A17
+        Principal: ecaceres@42.FR
+
+  Issued                Expires               Principal
+Jul 29 12:12:08 2019  Aug  5 12:12:01 2019  krbtgt/42.FR@42.FR
