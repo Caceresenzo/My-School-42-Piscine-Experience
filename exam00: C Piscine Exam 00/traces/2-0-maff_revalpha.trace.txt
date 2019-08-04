@@ -1,0 +1,60 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r1p5.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  2 18:36:51 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-piscine-exam-00/exam_20190802/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpzP5BJO/user log --pretty='%H - %an, %ad : %s'
+a9b3e589b94428f3ab9270e1ff103b21cdcda15f - Exam 42, Fri Aug 2 18:36:43 2019 +0200 : maff_revalpha
+791284af9d1bba73823ce32fc90c9a049aa898bf - Exam 42, Fri Aug 2 18:26:27 2019 +0200 : hello_2
+41e61e588d02b2806c334510718c7a7db254557a - Exam 42, Fri Aug 2 18:24:02 2019 +0200 : hello
+b78803ae93210810c98d8d217488489a373beeeb - Exam 42, Fri Aug 2 18:18:37 2019 +0200 : only_a
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpzP5BJO/user
+total 8
+-rw-r--r--  1 root  wheel  883 Aug  2 18:36 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel  102 Aug  2 18:36 hello
+drwxr-xr-x  3 root  wheel  102 Aug  2 18:36 maff_revalpha
+drwxr-xr-x  3 root  wheel  102 Aug  2 18:36 only_a
+
+/tmp/tmpzP5BJO/user/hello:
+total 8
+-rw-r--r--  1 root  wheel  967 Aug  2 18:36 hello.c
+
+/tmp/tmpzP5BJO/user/maff_revalpha:
+total 8
+-rw-r--r--  1 root  wheel  1181 Aug  2 18:36 maff_revalpha.c
+
+/tmp/tmpzP5BJO/user/only_a:
+total 8
+-rw-r--r--  1 root  wheel  953 Aug  2 18:36 only_a.c
+ 
+= maff_revalpha ================================================================
+$> clang -Wextra -Wall -Werror maff_revalpha.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./wkvxlz2izxhpie1m3etgoj7i
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

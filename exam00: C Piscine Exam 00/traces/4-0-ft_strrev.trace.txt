@@ -1,0 +1,112 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r12p12.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  2 18:52:27 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-piscine-exam-00/exam_20190802/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpRFWs4X/user log --pretty='%H - %an, %ad : %s'
+b673449a8a12b2773e73cf4568133bd159a3ea51 - Exam 42, Fri Aug 2 18:52:19 2019 +0200 : ft_strrev
+6273748cbb7268ab467aa08d2db1ec9b4d2c69ca - Exam 42, Fri Aug 2 18:40:05 2019 +0200 : ft_swap
+a9b3e589b94428f3ab9270e1ff103b21cdcda15f - Exam 42, Fri Aug 2 18:36:43 2019 +0200 : maff_revalpha
+791284af9d1bba73823ce32fc90c9a049aa898bf - Exam 42, Fri Aug 2 18:26:27 2019 +0200 : hello_2
+41e61e588d02b2806c334510718c7a7db254557a - Exam 42, Fri Aug 2 18:24:02 2019 +0200 : hello
+b78803ae93210810c98d8d217488489a373beeeb - Exam 42, Fri Aug 2 18:18:37 2019 +0200 : only_a
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpRFWs4X/user
+total 8
+-rw-r--r--  1 root  wheel  1343 Aug  2 18:52 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug  2 18:52 ft_strrev
+drwxr-xr-x  3 root  wheel   102 Aug  2 18:52 ft_swap
+drwxr-xr-x  3 root  wheel   102 Aug  2 18:52 hello
+drwxr-xr-x  3 root  wheel   102 Aug  2 18:52 maff_revalpha
+drwxr-xr-x  3 root  wheel   102 Aug  2 18:52 only_a
+
+/tmp/tmpRFWs4X/user/ft_strrev:
+total 8
+-rw-r--r--  1 root  wheel  1258 Aug  2 18:52 ft_strrev.c
+
+/tmp/tmpRFWs4X/user/ft_swap:
+total 8
+-rw-r--r--  1 root  wheel  962 Aug  2 18:52 ft_swap.c
+
+/tmp/tmpRFWs4X/user/hello:
+total 8
+-rw-r--r--  1 root  wheel  967 Aug  2 18:52 hello.c
+
+/tmp/tmpRFWs4X/user/maff_revalpha:
+total 8
+-rw-r--r--  1 root  wheel  1181 Aug  2 18:52 maff_revalpha.c
+
+/tmp/tmpRFWs4X/user/only_a:
+total 8
+-rw-r--r--  1 root  wheel  953 Aug  2 18:52 only_a.c
+ 
+= ft_strrev ====================================================================
+$> clang -Wextra -Wall -Werror ft_strrev.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./fx9n2qv7msw6960wptpv6fme ""
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./zs66mhe4lb6tfgt7deniwzwo "iczCaXl0D63gMPW"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./h2ljklxp6pns9morsq9wbjei "8rZ5SmKz6NPABXc"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./yy42uv8vg5b2wt72mm1dybh7 "QdMuKFLDsBW"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./zgmjp7l7u01tpfyytxk8k373 "KqC58ADzZkE3Yb"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./zrko57g8icfmzeouu4ob96mh "26sJ YlVbgOQETcyzarR se9PFAr RATyjx 5ao qGHlTY LD8e5G CN0Juz3GrcPXeSoOQ Q0xktHKiJmvMj4e9y Uqru M6yA3obVXBk7 r1Vw4ZF7q2pGDzIR0 9eYqLXSrO2 gAHvWQchk tTBlRCbKmQexD9r l6NBKEinQ4HYgxp3W pqSjXU7GvA8ERKnC dy7a"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./jgz8hpdhejswwrtxvdxn44j1 "9ixqQH8Bf 9FfaTuqV50PGreHXY ufghPOUzJ LJG ofQ3pmWP 6Nz sRI3b"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./vbniusyjsapn8ifohvst9ius "i1mwFNlt JDozW 1KjN4CDxXqiwM2Gd 68rh391xP I8Hq6vV3ZyKixQ snKIEel6 GjUR08uSrmZz"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./9f8oh5idvt9crjrk5xoeqgkr "Na0D9piA4Kkr XdO2WgaAhL1 sk1B8XK36ojGdQYR 7jfy2pbu FaUiEgn6 im6nMAx9 fHKIsMjQJT"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

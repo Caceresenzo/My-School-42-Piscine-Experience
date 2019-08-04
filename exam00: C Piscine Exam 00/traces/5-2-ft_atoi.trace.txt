@@ -1,0 +1,175 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r7p1.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  2 20:31:53 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-piscine-exam-00/exam_20190802/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpm7GwDQ/user log --pretty='%H - %an, %ad : %s'
+021faf8bfd4777768172beac44399e2e10688b37 - Exam 42, Fri Aug 2 20:31:43 2019 +0200 : ft_atoi_3
+5aaf58953d924f719f752c4da0ef6d2eacd92430 - Exam 42, Fri Aug 2 20:11:45 2019 +0200 : ft_atoi_2
+77c54771e86dc32a4be2766b21bad8f754293dce - Exam 42, Fri Aug 2 20:06:38 2019 +0200 : ft_atoi
+b673449a8a12b2773e73cf4568133bd159a3ea51 - Exam 42, Fri Aug 2 18:52:19 2019 +0200 : ft_strrev
+6273748cbb7268ab467aa08d2db1ec9b4d2c69ca - Exam 42, Fri Aug 2 18:40:05 2019 +0200 : ft_swap
+a9b3e589b94428f3ab9270e1ff103b21cdcda15f - Exam 42, Fri Aug 2 18:36:43 2019 +0200 : maff_revalpha
+791284af9d1bba73823ce32fc90c9a049aa898bf - Exam 42, Fri Aug 2 18:26:27 2019 +0200 : hello_2
+41e61e588d02b2806c334510718c7a7db254557a - Exam 42, Fri Aug 2 18:24:02 2019 +0200 : hello
+b78803ae93210810c98d8d217488489a373beeeb - Exam 42, Fri Aug 2 18:18:37 2019 +0200 : only_a
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpm7GwDQ/user
+total 8
+-rw-r--r--  1 root  wheel  2051 Aug  2 20:31 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 ft_atoi
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 ft_strrev
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 ft_swap
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 hello
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 maff_revalpha
+drwxr-xr-x  3 root  wheel   102 Aug  2 20:31 only_a
+
+/tmp/tmpm7GwDQ/user/ft_atoi:
+total 8
+-rw-r--r--  1 root  wheel  1768 Aug  2 20:31 ft_atoi.c
+
+/tmp/tmpm7GwDQ/user/ft_strrev:
+total 8
+-rw-r--r--  1 root  wheel  1258 Aug  2 20:31 ft_strrev.c
+
+/tmp/tmpm7GwDQ/user/ft_swap:
+total 8
+-rw-r--r--  1 root  wheel  962 Aug  2 20:31 ft_swap.c
+
+/tmp/tmpm7GwDQ/user/hello:
+total 8
+-rw-r--r--  1 root  wheel  967 Aug  2 20:31 hello.c
+
+/tmp/tmpm7GwDQ/user/maff_revalpha:
+total 8
+-rw-r--r--  1 root  wheel  1181 Aug  2 20:31 maff_revalpha.c
+
+/tmp/tmpm7GwDQ/user/only_a:
+total 8
+-rw-r--r--  1 root  wheel  953 Aug  2 20:31 only_a.c
+ 
+= ft_atoi ======================================================================
+$> clang -Wextra -Wall -Werror main.c ft_atoi.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./a4tu7zt2tgbhzj4yxmemj6fd 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./6rhkanezk51r5lyd21mnyoqn "21" "2313"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./4050cja4ewstyyxdshv1dgpe 2147483647
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./6ihs3shctdx0s3jpb6uuao2e -2147483648
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./y5j8rbdgoadnu9zm7ytxysso 0
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./hfyzoyuyccqjevy6ecf03jcp 12211t11
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./2u2d0zh9blo207hleowqmdo8 --223
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./kpb595gtof2ey96kyo3yb4m1 1731915855
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./eqxokqefgzw6vqze4eyl1tqn -1450834472
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./u1ic5k0gbp35w4yni6m6vp3j -470426919
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./f95ccfnwxfqouv6v6mxtoh28 -248586743
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./7zndsvibwrh8174xn03cb6sf 1641930943
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./uk0wxmpl08ag4gmfldvt3m3x -692558847
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./j7304kn7yk28tgj3i6mg2k4n 1871631681
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./4dsx85gtdu9h42owruczqw3b 1944649799
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./nfwrc4ot5a71z6lukeqcd0pm -932521717
+$> diff -U 3 user_output_test16 test16.output | cat -e
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./8htdjb7n7vp090bquc7od2wn -1156221704
+$> diff -U 3 user_output_test17 test17.output | cat -e
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./jaa7c0thlnd0orx8cn24xeho 35819972
+$> diff -U 3 user_output_test18 test18.output | cat -e
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./pe7cdov25ltvqwp34r7jbgwa -567709696
+$> diff -U 3 user_output_test19 test19.output | cat -e
+
+Diff OK :D
+= Test 20 ==================================================
+$> ./um6i6j4o1x9391rxt8q5ed7s -1274248548
+$> diff -U 3 user_output_test20 test20.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
