@@ -1,0 +1,142 @@
+<style type="text/css">
+    body {
+        background-color: black;
+    }
+    #main {
+        height: 100%;
+        width: 100%;
+    }
+    .box {
+        background-color: lightgreen;
+        height: 20px;
+        width: 20px;
+        margin: 8px;
+        float: left;
+    }
+</style>
+
+<div id="main"></div>
+
+<script>
+    const BOARD_SIZE = 10;
+    const DELAY = 100;
+
+    let div = document.getElementById("main");
+    let html = "";
+
+    var board = [];
+    for (let i = 0; i < BOARD_SIZE; i++) {
+        let line = [];
+        for (let j = 0; j < BOARD_SIZE; j++) {
+            line.push(0);
+        }
+        board.push(line);
+    }
+
+    for (let i = 0; i < BOARD_SIZE; i++) {
+        for (let j = 0; j < BOARD_SIZE; j++) {
+            html += '<div id="box_' + i + '_' + j + '" class="box"></div>';
+        }
+        html += '<br>';
+        html += '<br>';
+    }
+
+    div.innerHTML = html;
+
+    function getBlockAt(x, y) {
+        return {
+            x: x,
+            y: y,
+            div: document.getElementById("box_" + y + "_" + x),
+            isQueen: function() {
+                return board[this.y][this.x];
+            },
+            setQueen: function(set) {
+                board[this.y][this.x] = set ? 1 : 0;
+                this.div.style.backgroundColor = set ? "red" : "green";
+            },
+            highlight: function(set) {
+                this.div.style.backgroundColor = set ? "blue" : "green";
+                if (!set) {
+                    this.setQueen(this.isQueen());
+                }
+            },
+            animate: function(offset, multiplier = 1) {
+                let self = this;
+                setTimeout(function() {
+                    self.highlight(true);
+                    setTimeout(function() {
+                        self.highlight(false);
+                    }, DELAY);
+                }, (BOARD_SIZE * multiplier + offset) * DELAY);
+            }
+        };
+    }
+
+    function isQueenAtRisk(at_x, at_y) {
+        let borders = [-1, -1];
+
+        // line
+        /*let x = 0;
+        while (x < BOARD_SIZE) {
+            getBlockAt(x, at_y).animate(x, 0);
+
+            if (board[at_y][x++]) {
+                return (true);
+            }
+        }
+        let y = 0;
+        while (y < BOARD_SIZE) {
+            getBlockAt(at_x, y).animate(y);
+
+            if (board[y++][at_x]) {
+                return (true);
+            }
+        }*/
+        // diago
+        let i = 0;
+        /*borders[0] = Math.min(at_x, at_y);
+        borders[1] = Math.min(BOARD_SIZE - at_x, BOARD_SIZE - at_y);
+        x = at_x - borders[0];
+        y = at_y - borders[0];
+        while (x < at_x + borders[1]) {
+            while (y < at_y + borders[1]) {
+                getBlockAt(x, y).animate(i++, 2);
+
+                if (board[y++][x++]) {
+                    return (true);
+                }
+            }
+        }*/
+        x = 0;
+        y = 0;
+        let b = at_y - at_x;
+        let _bp = at_y + at_x;
+        while (x < BOARD_SIZE) {
+            y = 0;
+            while (y < BOARD_SIZE) {
+                if (y == x + b || y == -x + _bp || x == at_x || y == at_y) {
+                    let block = getBlockAt(x, y);
+                    block.animate(i++, 0);
+
+                    if (block.isQueen()) {
+                        return true;
+                    }
+                }
+                y++;
+            }
+            x++;
+        }
+        return (false);
+    }
+
+    getBlockAt(1, 4).setQueen(true);
+    setTimeout(function() {
+        let x = 6;
+        let y = 8;
+        console.log(isQueenAtRisk(x, y));
+        setInterval(function() {
+            getBlockAt(x, y).div.style.backgroundColor = "orange";
+        }, 10);
+    }, 100);
+</script>

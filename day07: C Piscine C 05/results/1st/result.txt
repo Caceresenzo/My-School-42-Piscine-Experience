@@ -1,0 +1,6 @@
+	
+Hi,
+
+You have been graded 5 on C Piscine C 05:
+
+ex00: OK | ex01: Compilation error | ex02: OK | ex03: OK | ex04: OK | ex05: OK | ex06: OK | ex07: OK | ex08: OK
