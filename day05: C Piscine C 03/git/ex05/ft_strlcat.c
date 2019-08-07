@@ -6,7 +6,7 @@
 /*   By: ecaceres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/04 15:48:24 by ecaceres          #+#    #+#             */
-/*   Updated: 2019/08/04 15:49:10 by ecaceres         ###   ########.fr       */
+/*   Updated: 2019/08/05 12:00:15 by ecaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,29 @@ unsigned int	ft_str_length_fast(char *dest)
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	length_dest;
-	unsigned int	length_src;
-	unsigned int	index;
+	char			*dst;
+	char			*src_start;
+	unsigned int	dst_length;
+	unsigned int	remaing;
 
-	length_dest = ft_str_length_fast(dest);
-	length_src = ft_str_length_fast(src);
-	if (length_dest >= size)
-		return (length_src + size);
-	if (size == 0)
-		return (length_src);
-	index = 0;
-	while (src[index] != '\0' && index < (size - 1 - length_dest))
+	dst = dest;
+	src_start = src;
+	remaing = size;
+	while (remaing-- != 0 && *dst != '\0')
+		dst++;
+	dst_length = dst - dest;
+	remaing = size - dst_length;
+	if (remaing == 0)
+		return (dst_length + ft_str_length_fast(src));
+	while (*src != '\0')
 	{
-		dest[length_dest + index] = src[index];
-		index++;
+		if (remaing > 1)
+		{
+			*dst++ = *src;
+			remaing--;
+		}
+		src++;
 	}
-	return (length_dest + length_src);
+	*dst = '\0';
+	return (dst_length + (src - src_start));
 }
