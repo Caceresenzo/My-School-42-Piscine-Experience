@@ -1,0 +1,140 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r4p11.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Aug  5 22:23:43 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_04/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmp3ngihq/user log --pretty='%H - %an, %ad : %s'
+340fe6e448565949a0a8c615c33266b2690ee4c9 - Enzo CACERES, Mon Aug 5 20:08:51 2019 +0200 : ex05
+2af106c2cb210e19452c0a155e7b8bd1fa27d51c - Enzo CACERES, Mon Aug 5 20:08:42 2019 +0200 : ex04
+bdfff2ebf8c2f1a71eb5b60738047f561fb83030 - Enzo CACERES, Mon Aug 5 20:08:29 2019 +0200 : ex03
+3a59f1f963627324f6c48c6e06a84d85f3f5863f - Enzo CACERES, Mon Aug 5 20:07:44 2019 +0200 : ex02
+9bb357dc8bd46b872e9c69807e8cc53de94798a3 - Enzo CACERES, Mon Aug 5 20:07:33 2019 +0200 : ex01
+44fcb87bc7a4fc1b04dfe024043892b53cb293b6 - Enzo CACERES, Mon Aug 5 20:07:27 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp3ngihq/user
+total 8
+-rw-r--r--  1 root  wheel  1452 Aug  5 22:23 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex00
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex01
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex02
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex03
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex04
+drwxr-xr-x  3 root  wheel   102 Aug  5 22:23 ex05
+
+/tmp/tmp3ngihq/user/ex00:
+total 8
+-rw-r--r--  1 root  wheel  994 Aug  5 22:23 ft_strlen.c
+
+/tmp/tmp3ngihq/user/ex01:
+total 8
+-rw-r--r--  1 root  wheel  979 Aug  5 22:23 ft_putstr.c
+
+/tmp/tmp3ngihq/user/ex02:
+total 8
+-rw-r--r--  1 root  wheel  1196 Aug  5 22:23 ft_putnbr.c
+
+/tmp/tmp3ngihq/user/ex03:
+total 8
+-rw-r--r--  1 root  wheel  1524 Aug  5 22:23 ft_atoi.c
+
+/tmp/tmp3ngihq/user/ex04:
+total 8
+-rw-r--r--  1 root  wheel  2157 Aug  5 22:23 ft_putnbr_base.c
+
+/tmp/tmp3ngihq/user/ex05:
+total 8
+-rw-r--r--  1 root  wheel  2228 Aug  5 22:23 ft_atoi_base.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strlen.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_strlen.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./0j4qnsac8rcnklw5sqgu6nvu
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex01 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_putstr.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror test_ft_putstr.c ft_putstr.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./eiauc9ckn98wwlc28ilytgbb
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex02 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_putnbr.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_putnbr.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./2q9u4psk19zind9xdx6493yl
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= ex03 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_atoi.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_atoi.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./cd88ujtq60fb0hdyjl49nssi
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= ex04 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_putnbr_base.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_putnbr_base.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./1e9xl6mj8bsugjzcbrmu31lv
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex05 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_atoi_base.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_atoi_base.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./31kb8i6v72yh0utp5cjbjvrv
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= Final grade: 100 =============================================================
+
