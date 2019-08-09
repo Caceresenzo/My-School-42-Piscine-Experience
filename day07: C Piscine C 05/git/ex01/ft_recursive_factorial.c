@@ -10,17 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial_recursive(int factorial, int number)
+int	ft_recursive_factorial_recursive(int factorial, int number)
 {
 	factorial *= number--;
 	if (number > 0)
-		return (ft_iterative_factorial_recursive(factorial, number));
+		return (ft_recursive_factorial_recursive(factorial, number));
 	return (factorial);
 }
 
-int	ft_iterative_factorial(int nb)
+int	ft_recursive_factorial(int nb)
 {
 	if (nb < 0)
 		return (0);
-	return (ft_iterative_factorial_recursive(1, nb));
+	if (nb == 0)
+		return (1);
+	return (ft_recursive_factorial_recursive(1, nb));
 }
