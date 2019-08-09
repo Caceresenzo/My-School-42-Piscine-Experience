@@ -1,0 +1,296 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r4p18.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  9 14:02:16 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_07/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmp60PvS_/user log --pretty='%H - %an, %ad : %s'
+a51415e29d45663845b9d08f07edc4df350951ff - Enzo CACERES, Fri Aug 9 12:37:23 2019 +0200 : ex05
+7fe623d0f3099c87121504e8e7bc8f6f7f408a5f - Enzo CACERES, Fri Aug 9 12:37:15 2019 +0200 : ex04
+c71ba2223087071eb700d33fef6a28d090bb3677 - Enzo CACERES, Fri Aug 9 12:36:59 2019 +0200 : ex03
+5b8f15b82ff5e2c46d1190bff2e46d36ce38af5c - Enzo CACERES, Fri Aug 9 12:36:48 2019 +0200 : ex02
+7eccd74f48ee224d2b1eadeb4f0b1e830c98d891 - Enzo CACERES, Fri Aug 9 12:35:50 2019 +0200 : ex01
+568e5a4503b431ed75a1e70e1b70418d8b9807d1 - Enzo CACERES, Fri Aug 9 12:35:39 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp60PvS_/user
+total 8
+-rw-r--r--  1 root  wheel  1566 Aug  9 14:02 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug  9 14:02 ex00
+drwxr-xr-x  3 root  wheel   102 Aug  9 14:02 ex01
+drwxr-xr-x  3 root  wheel   102 Aug  9 14:02 ex02
+drwxr-xr-x  3 root  wheel   102 Aug  9 14:02 ex03
+drwxr-xr-x  4 root  wheel   136 Aug  9 14:02 ex04
+drwxr-xr-x  3 root  wheel   102 Aug  9 14:02 ex05
+
+/tmp/tmp60PvS_/user/ex00:
+total 8
+-rw-r--r--  1 root  wheel  1284 Aug  9 14:02 ft_strdup.c
+
+/tmp/tmp60PvS_/user/ex01:
+total 8
+-rw-r--r--  1 root  wheel  1213 Aug  9 14:02 ft_range.c
+
+/tmp/tmp60PvS_/user/ex02:
+total 8
+-rw-r--r--  1 root  wheel  1295 Aug  9 14:02 ft_ultimate_range.c
+
+/tmp/tmp60PvS_/user/ex03:
+total 8
+-rw-r--r--  1 root  wheel  2108 Aug  9 14:02 ft_strjoin.c
+
+/tmp/tmp60PvS_/user/ex04:
+total 16
+-rw-r--r--  1 root  wheel  2432 Aug  9 14:02 ft_convert_base.c
+-rw-r--r--  1 root  wheel  1803 Aug  9 14:02 ft_convert_base2.c
+
+/tmp/tmp60PvS_/user/ex05:
+total 8
+-rw-r--r--  1 root  wheel  3068 Aug  9 14:02 ft_split.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strdup.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_strdup.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./lizqt29pjrbpna1p1ui6o0de
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex01 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_range.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_range.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./zg6irlxiywurj3sfrvpjtz9y
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex02 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_ultimate_range.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_ultimate_range.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./cqfatp0d119m4yqms3cmm7k4
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex03 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strjoin.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_strjoin.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./6it69nimz3via56f61npbhty
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1   2019-08-09 12:02:25.000000000 +0000$
++++ test1.output        2019-08-09 12:02:25.000000000 +0000$
+@@ -1,4 +1,4 @@$
+-(null)$
++$
+ lol$
+ lol1234pouic$
+ lol1234pouic1234$
+
+Diff KO :(
+Grade: 0
+
+= ex04 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_convert_base2.c ft_convert_base.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_convert_base2.c main.c ft_convert_base.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./csc3h7a3zp28evx1rh2lhyr1
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1   2019-08-09 12:02:28.000000000 +0000$
++++ test1.output        2019-08-09 12:02:27.000000000 +0000$
+@@ -1,21 +1,21 @@$
+ 12263$
+-02263$
+--0263$
+--1363$
+--1063$
+-26063$
++0$
++0$
++-13$
++-10$
++26$
+ 130020$
+--12030$
+-250030$
++-1203$
++250$
+ 121343$
+-121343$
+-541343$
+-041343$
+-041343$
+-041343$
+-141343$
+-10011010010^?^G$
+-10011010010^?^G$
++1$
++54$
++0$
++0$
++0$
++1$
++10011010010$
++10011010010$
+ (null)$
+ (null)$
+ (null)$
+@@ -28,52 +28,52 @@$
+ (null)$
+ (null)$
+ (null)$
+-vs811010010^?^G$
+-1s811010010^?^G$
+-3s811010010^?^G$
+-(null)$
+-Ls811010010^?^G$
+-Hs811010010^?^G$
+-0s811010010^?^G$
+-W8g11010010^?^G$
+-u8g11010010^?^G$
+-78g11010010^?^G$
+-38g11010010^?^G$
+-L8g11010010^?^G$
+-dtg11010010^?^G$
+-,wk&w^10010^?^G$
+-Swk&w^10010^?^G$
+-(null)$
+-,ML&w^10010^?^G$
+-(null)$
+-B!L&w^10010^?^G$
+-8!L&w^10010^?^G$
+-9!L&w^10010^?^G$
+-S***n*10010^?^G$
+-(null)$
+-9***n*10010^?^G$
+-ueT*n*10010^?^G$
+-aeT*n*10010^?^G$
+-.eT*n*10010^?^G$
+-0LT*n*10010^?^G$
+-,LT*n*10010^?^G$
+-1LT*n*10010^?^G$
+-qTq*n*10010^?^G$
+-2Tq*n*10010^?^G$
+-1Yq*n*10010^?^G$
+-7c]*n*10010^?^G$
+-,CRKn*10010^?^G$
+-3CRKn*10010^?^G$
+-/CRKn*10010^?^G$
+-2CRKn*10010^?^G$
+-.CRKn*10010^?^G$
+-3CRKn*10010^?^G$
+-0CRKn*10010^?^G$
+-sBRKn*10010^?^G$
+-4BRKn*10010^?^G$
+-6BRKn*10010^?^G$
+-*GRKn*10010^?^G$
+-(null)$
+-4GRKn*10010^?^G$
+-*GRKn*10010^?^G$
+-QrRKn*10010^?^G$
++vs8$
++1$
++3$
++(null)$
++L$
++H$
++0$
++W8g$
++u$
++7$
++3$
++L$
++dt$
++,wk&w^$
++S$
++(null)$
++,ML$
++(null)$
++B!$
++8$
++9$
++S***n*$
++(null)$
++9$
++ueT$
++a$
++.$
++0L$
++,$
++1$
++qTq$
++2$
++1Y$
++7c]$
++,CRK$
++3$
++/$
++2$
++.$
++3$
++0$
++sB$
++4$
++6$
++*G$
++(null)$
++4$
++*$
++Qr$
+
+Diff KO :(
+Grade: 0
+
+= ex05 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_split.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./qtmlrupognbm4ruyyydzb8v4 "          " "    "
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1   2019-08-09 12:02:29.000000000 +0000$
++++ test1.output        2019-08-09 12:02:29.000000000 +0000$
+@@ -1,4 +1,3 @@$
+                $
+ tab start$
+-tab[0]:         $
+ tab end$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 45 ==============================================================

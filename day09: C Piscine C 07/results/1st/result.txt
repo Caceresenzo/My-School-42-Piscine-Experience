@@ -1,0 +1,6 @@
+		
+Hi,
+
+You have been graded 45 on C Piscine C 07:
+
+ex00: OK | ex01: OK | ex02: OK | ex03: KO | ex04: KO | ex05: KO
