@@ -1,0 +1,115 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r10p22.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  9 18:30:08 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-piscine-exam-01/exam_20190809/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpiCIhBQ/user log --pretty='%H - %an, %ad : %s'
+20271b5e14686d560425d7aa026d6abeb12321e7 - Exam 42, Fri Aug 9 18:29:59 2019 +0200 : rot_13_2
+e2e188dda1a145124a3b53c1a9ab5def55f0df22 - Exam 42, Fri Aug 9 18:25:41 2019 +0200 : rot_13
+062d543b9db5074827ba0af8f338677e74d7c43f - Exam 42, Fri Aug 9 18:06:56 2019 +0200 : ft_swap
+380ec093645fec9b2bac0295d1521896e749a6a6 - Exam 42, Fri Aug 9 18:04:51 2019 +0200 : only_z
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpiCIhBQ/user
+total 8
+-rw-r--r--  1 root  wheel  909 Aug  9 18:30 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel  102 Aug  9 18:30 ft_swap
+drwxr-xr-x  3 root  wheel  102 Aug  9 18:30 only_z
+drwxr-xr-x  3 root  wheel  102 Aug  9 18:30 rot_13
+
+/tmp/tmpiCIhBQ/user/ft_swap:
+total 8
+-rw-r--r--  1 root  wheel  962 Aug  9 18:30 ft_swap.c
+
+/tmp/tmpiCIhBQ/user/only_z:
+total 8
+-rw-r--r--  1 root  wheel  951 Aug  9 18:30 only_z.c
+
+/tmp/tmpiCIhBQ/user/rot_13:
+total 8
+-rw-r--r--  1 root  wheel  1542 Aug  9 18:30 rot_13.c
+ 
+= rot_13 =======================================================================
+$> clang -Wextra -Wall -Werror rot_13.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./dhln2twzyy540tmjvs914nbe 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./fqyxcep8wtgmf5y316wxbve7 "vbGiUOR"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./zn4ugglfj6x3su4lmvso4f4u "jHFxJZYCsgcKG"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./w3ti3r5xo4l3l1eowojvy0pu "J8EA"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./3kcacdj6r1ahqly7ctfqb86g "X7mAGBP 9kAihnxd7bcU fxgSb LsBhGepE ycABZIamkuN3q1 RcTL64U9YzfoynVN NhH8 DCRpWI9X4PJ BMNKWRtz2qLODPs 1tDx3wK8YPmdqXRv 2yOLSseM 847 1P6ZnG wlQbs qHPOI9G70j exjiG0OCPlsD5Yr"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./g3obeqpiplkmxxcpn3eu8wke "E4rySlagedifTL QxLm4u5rUD 7XEtQ9FZA48sW XZMmyin7Q8r tXMg9WJmTDepUc"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./aoycrbsgz0jdic6oqouy0x4m "NcZ 9M0cxaF lwmPSEUVAj1IB bD56tIEGgKnL79 DRZrfnqiX4Ka1F0wV mfC2YBnu3Qro"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./duec24libpnr9lf4ha298xaz "eziLZx65n1KhJX" "Bz2XfVG7drUWEIbep" "jwcet1BOENd" "pjUXcG2h7aM" "GJw" "6xDrKL" "SO8" "vKWaXbsD8M7V" "89KmEcRusPybJl3" "eRQxWdaShL" "dPZ" "ZrK5" "8rBcCbYnoUX" "a4RZETGJ8fDu2" "VZsLbFAMYaj" "f0jy9mUBaudR"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+--- user_output_test8	2019-08-09 16:30:12.000000000 +0000$
++++ test8.output	2019-08-09 16:30:12.000000000 +0000$
+@@ -1,16 +1 @@$
+-rmvYMk65a1XuWK$
+-Om2KsIT7qeHJRVorc$
+-wjprg1OBRAq$
+-cwHKpT2u7nZ$
+-TWj$
+-6kQeXY$
+-FB8$
+-iXJnKofQ8Z7I$
+-89XzRpEhfCloWy3$
+-rEDkJqnFuY$
+-qCM$
+-MeX5$
+-8eOpPoLabHK$
+-n4EMRGTW8sQh2$
+-IMfYoSNZLnw$
+-s0wl9zHOnhqE$
++$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

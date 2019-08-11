@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r10p10.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Fri Aug  9 18:05:01 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-piscine-exam-01/exam_20190809/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpBDd1_v/user log --pretty='%H - %an, %ad : %s'
+380ec093645fec9b2bac0295d1521896e749a6a6 - Exam 42, Fri Aug 9 18:04:51 2019 +0200 : only_z
+ 
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpBDd1_v/user
+total 8
+-rw-r--r--  1 root  wheel  212 Aug  9 18:05 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel  102 Aug  9 18:05 only_z
+
+/tmp/tmpBDd1_v/user/only_z:
+total 8
+-rw-r--r--  1 root  wheel  951 Aug  9 18:05 only_z.c
+ 
+= only_z =======================================================================
+$> clang -Wextra -Wall -Werror only_z.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./itvyn1c9jrkzoskru6zvcfsf 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
