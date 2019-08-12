@@ -1,0 +1,150 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r7p19.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Mon Aug 12 19:03:21 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_08/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmpTHzAkm/user log --pretty='%H - %an, %ad : %s'
+679a1aa3d9e0771463464c2b22ed003094f1ff24 - Enzo CACERES, Mon Aug 12 17:17:30 2019 +0200 : ex05_0_2
+c2993ba3d16c2bb8e7273b5fc3b5779ebfe46606 - Enzo CACERES, Mon Aug 12 17:17:16 2019 +0200 : ex04_0_2
+2cad9a7def55dbed93e4fc3973a758b1a2c7dd71 - Enzo CACERES, Mon Aug 12 16:53:21 2019 +0200 : ex05
+457be2d55b636f4e4ca1814957bf4c183c681218 - Enzo CACERES, Mon Aug 12 16:53:13 2019 +0200 : ex04
+fcee563fefe0113d74fe78a622174837550fb6a3 - Enzo CACERES, Mon Aug 12 16:53:04 2019 +0200 : ex03
+e47225eb8d733ee186b1f8f1d7bb16c3b33ff145 - Enzo CACERES, Mon Aug 12 16:52:52 2019 +0200 : ex02
+1107a536c96963fbdfd819c967189a1fd3913ffb - Enzo CACERES, Mon Aug 12 16:52:45 2019 +0200 : ex01
+73b607c1048a5242b32d6c8545f72446a83aa57b - Enzo CACERES, Mon Aug 12 16:52:36 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpTHzAkm/user
+total 8
+-rw-r--r--  1 root  wheel  1849 Aug 12 19:03 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex00
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex01
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex02
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex03
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex04
+drwxr-xr-x  3 root  wheel   102 Aug 12 19:03 ex05
+
+/tmp/tmpTHzAkm/user/ex00:
+total 8
+-rw-r--r--  1 root  wheel  1073 Aug 12 19:03 ft.h
+
+/tmp/tmpTHzAkm/user/ex01:
+total 8
+-rw-r--r--  1 root  wheel  1230 Aug 12 19:03 ft_boolean.h
+
+/tmp/tmpTHzAkm/user/ex02:
+total 8
+-rw-r--r--  1 root  wheel  985 Aug 12 19:03 ft_abs.h
+
+/tmp/tmpTHzAkm/user/ex03:
+total 8
+-rw-r--r--  1 root  wheel  995 Aug 12 19:03 ft_point.h
+
+/tmp/tmpTHzAkm/user/ex04:
+total 8
+-rw-r--r--  1 root  wheel  1752 Aug 12 19:03 ft_strs_to_tab.c
+
+/tmp/tmpTHzAkm/user/ex05:
+total 8
+-rw-r--r--  1 root  wheel  1445 Aug 12 19:03 ft_show_tab.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette  ft.h | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_other.c -o user_exe 
+
+$> clang -Wextra -Wall -Werror main.c ft_other.c -o ref_exe 
+
+= Test 1 ===================================================
+$> ./6vy4latfcpwjh8qxdrprnaac
+$> ./6vy4latfcpwjh8qxdrprnaac
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 1
+
+= ex01 =========================================================================
+$> /usr/bin/norminette  ft_boolean.h | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror test_ft_boolean.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./4do6isvth0rcooditikxv93i un
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 10
+
+= ex02 =========================================================================
+$> /usr/bin/norminette  ft_abs.h | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./jx78lo4q73z28l10poyeqcfw
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 10
+
+= ex03 =========================================================================
+$> /usr/bin/norminette  ft_point.h | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror test_ft_point.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./nmtyfdn226gkaitrkdmuc33e
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 19
+
+= ex04 =========================================================================
+$> /usr/bin/norminette  ft_strs_to_tab.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_show_tab.c ft_strs_to_tab.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./bx1ws4mxsr6tyonu803sw7t7
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 30
+
+= ex05 =========================================================================
+$> /usr/bin/norminette  ft_show_tab.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_strs_to_tab.c ft_show_tab.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./53tl7tgeouegoto7j80u8iur
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+All tests OK
+Grade: 30
+
+= Final grade: 100 =============================================================
