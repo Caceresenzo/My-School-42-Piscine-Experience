@@ -56,14 +56,14 @@ int		ft_compute_final_length(char **strings, int size, int sep_length)
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int		sep_length;
 	int		full_length;
 	int		index;
 	char	*read_head;
 	char	*string;
 
-	sep_length = ft_str_length(sep);
-	full_length = ft_compute_final_length(strs, size, sep_length);
+	if (size == 0)
+		return ((char *)malloc(sizeof(char)));
+	full_length = ft_compute_final_length(strs, size, ft_str_length(sep));
 	if (!(string = (char *)malloc((full_length + 1) * sizeof(char))))
 		return (0);
 	read_head = string;
@@ -75,7 +75,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		if (index < size - 1)
 		{
 			ft_strcpy(read_head, sep);
-			read_head += sep_length;
+			read_head += ft_str_length(sep);
 		}
 		index++;
 	}
@@ -85,17 +85,23 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 int		main(void)
 {
+	int		index;
 	char	**strs;
 	char	*separator;
 	char	*result;
 
 	strs = (char**)malloc(4 * sizeof(strs));
-	strs[0] = "Hello";
-	strs[1] = "World";
-	strs[2] = "From";
-	strs[3] = "strjoin()";
-	separator = " ";
-	result = ft_strjoin(4, strs, separator);
-	printf("result : $%s$\n", result);
-	free(result);
+	strs[0] = "lol";
+	strs[1] = "1234";
+	strs[2] = "poiuic";
+	strs[3] = "1234";
+	separator = "";
+	index = 0;
+	while (index < 4)
+	{
+		result = ft_strjoin(index, strs, separator);
+		printf("result with size = %d : $%s$\n", index, result);
+		free(result);
+		index++;
+	}
 }

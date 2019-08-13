@@ -12,8 +12,6 @@
 
 #include <stdbool.h>
 #include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
 
 #define NO_MATCH -1
 
@@ -47,7 +45,6 @@ char	*ft_buffer_base(char *base, unsigned int number, bool negative)
 	length = compute_number_length(number, radix, negative);
 	if (!(string = (char *)malloc((length + 1) * sizeof(char))))
 		return (0);
-	string[length - 1] = '\0';
 	if (negative)
 		string[0] = '-';
 	index = negative ? 1 : 0;
@@ -56,6 +53,7 @@ char	*ft_buffer_base(char *base, unsigned int number, bool negative)
 		string[length - (!negative) - index++] = base[number % radix];
 		number /= radix;
 	}
+	string[length] = '\0';
 	return (string);
 }
 
@@ -75,9 +73,8 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 		nbr++;
 	while (*nbr == '+' || *nbr == '-')
 	{
-		if (*nbr == '-')
+		if (*(nbr++) == '-')
 			minus *= -1;
-		nbr++;
 	}
 	while ((resolved = resolve_base(base_from, *nbr)) != NO_MATCH)
 	{
@@ -85,5 +82,6 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 		result += resolved;
 		nbr++;
 	}
-	return (ft_buffer_base(base_to, result, minus > 0 ? false : true));
+	minus = result == 0 ? 1 : minus;
+	return (ft_buffer_base(base_to, result, (minus > 0 ? false : true)));
 }

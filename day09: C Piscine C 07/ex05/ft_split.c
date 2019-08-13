@@ -5,19 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecaceres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/08 18:10:16 by ecaceres          #+#    #+#             */
-/*   Updated: 2019/08/09 12:10:34 by ecaceres         ###   ########.fr       */
+/*   Created: 2019/08/12 13:59:15 by ecaceres          #+#    #+#             */
+/*   Updated: 2019/08/12 16:39:44 by ecaceres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdbool.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-#define FIND_OFFSET 2
-#define EMPTY_NEEDLE 0
-#define NO_MATCH 1
+bool	is_char_in_string(char c, char *set)
+{
+	while (true)
+	{
+		if (*set == '\0')
+			return (c == '\0');
+		if (*set == c)
+			return (true);
+		set++;
+	}
+	return (false);
+}
 
-char			*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int index;
 
@@ -35,93 +44,66 @@ char			*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-unsigned int	ft_str_find(char *haystack, char *needle, int start, int *size)
+int		count_occur(char *str, char *charset)
 {
-	char *haystack_start;
-	char *needle_start;
-
-	if (*(needle_start = needle) == '\0')
-		return (EMPTY_NEEDLE);
-	haystack += start;
-	haystack_start = haystack;
-	while (true)
-	{
-		if (*needle == '\0')
-			return (haystack - haystack_start + FIND_OFFSET);
-		if (*haystack == *needle)
-			needle++;
-		else
-			needle = needle_start;
-		if (size != 0)
-			*size += 1;
-		if (*haystack == '\0')
-			break ;
-		haystack++;
-	}
-	return (NO_MATCH);
-}
-
-int				ft_count_occurrence(char *haystack, char *needle)
-{
-	int	count;
-	int	offset;
-	int	result;
+	int		count;
+	char	*previous;
+	char	*next;
 
 	count = 0;
-	offset = 0;
+	previous = str;
+	next = str;
 	while (true)
 	{
-		result = ft_str_find(haystack, needle, offset, 0);
-		if (result == NO_MATCH || result == EMPTY_NEEDLE)
+		if (is_char_in_string(*str, charset))
+			next = str;
+		if (next - previous > 1)
+			count++;
+		if (*str == '\0')
 			break ;
-		count++;
-		offset += result - FIND_OFFSET;
+		previous = next;
+		str++;
 	}
 	return (count);
 }
 
-char			**ft_split_dlg(char *str, char *charset, char **arr, int d_len)
+int		add_part(char **entry, char *previous, int size, char *charset)
 {
-	int	index;
-	int	offset;
-	int	result;
-	int	size;
-
-	index = 0;
-	offset = 0;
-	while (index < ft_count_occurrence(str, charset) + 1)
+	if (is_char_in_string(previous[0], charset))
 	{
-		size = 0;
-		result = ft_str_find(str, charset, offset, &size);
-		if (result == EMPTY_NEEDLE)
-			break ;
-		if (!(arr[index] = (char *)malloc((size) * sizeof(char))))
-			return (0);
-		if (result == NO_MATCH)
-			d_len = 0;
-		arr[index] = ft_strncpy(arr[index], str + offset, size - d_len);
-		if (result == NO_MATCH)
-			break ;
-		offset += size;
-		index++;
+		previous++;
+		size--;
 	}
-	return (arr);
+	*entry = (char *)malloc((size + 3) * sizeof(char));
+	ft_strncpy(*entry, previous, size);
+	(*entry)[size] = '\0';
+	(*entry)[size + 1] = '\0';
+	return (1);
 }
 
-char			**ft_split(char *str, char *charset)
+char	**ft_split(char *str, char *charset)
 {
-	int		total_occ;
+	int		index;
+	int		size;
+	char	*previous;
+	char	*next;
 	char	**array;
-	char	*pointer;
 
-	pointer = charset;
-	while (*pointer)
-		pointer++;
-	total_occ = ft_count_occurrence(str, charset);
-	if (!(array = (char **)malloc((total_occ + 2) * sizeof(char *))))
-		return (0);
-	if (!ft_split_dlg(str, charset, array, pointer - charset))
-		return (0);
-	array[total_occ + 1] = 0;
+	array = (char **)malloc((count_occur(str, charset) + 1) * sizeof(char *));
+	index = 0;
+	previous = str;
+	next = str;
+	while (true)
+	{
+		if (is_char_in_string(*str, charset))
+			next = str;
+		if ((size = next - previous) > 1)
+			index += add_part(&array[index], previous, size, charset);
+		if (*str == '\0')
+			break ;
+		previous = next;
+		str++;
+	}
+	array[index] = 0;
 	return (array);
 }

@@ -1,0 +1,205 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r7p11.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Tue Aug 13 19:15:52 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_07/ecaceres2
+
+= Git history ==================================================================
+$> git -C /tmp/tmpBwgxt5/user log --pretty='%H - %an, %ad : %s'
+1701b67a43546363d6782d94a5d2a6140df18197 - Enzo CACERES, Tue Aug 13 17:51:49 2019 +0200 : ex03_2
+5b425e6270ce45c62c25c7eecbdf18a450d68f89 - Enzo CACERES, Tue Aug 13 17:51:03 2019 +0200 : ex05_2_2
+f2085d6c7f63d5a4932b4e15e03247ff5011072a - Enzo CACERES, Mon Aug 12 18:00:46 2019 +0200 : ex02_2
+49311672b2d8b354275f41249fcfe3e9c9c5eacd - Enzo CACERES, Mon Aug 12 17:57:12 2019 +0200 : ex05_2
+ea7e130c0a280efda97234e4dfd8261185af4a31 - Enzo CACERES, Mon Aug 12 17:57:00 2019 +0200 : ex04_2
+a51415e29d45663845b9d08f07edc4df350951ff - Enzo CACERES, Fri Aug 9 12:37:23 2019 +0200 : ex05
+7fe623d0f3099c87121504e8e7bc8f6f7f408a5f - Enzo CACERES, Fri Aug 9 12:37:15 2019 +0200 : ex04
+c71ba2223087071eb700d33fef6a28d090bb3677 - Enzo CACERES, Fri Aug 9 12:36:59 2019 +0200 : ex03
+5b8f15b82ff5e2c46d1190bff2e46d36ce38af5c - Enzo CACERES, Fri Aug 9 12:36:48 2019 +0200 : ex02
+7eccd74f48ee224d2b1eadeb4f0b1e830c98d891 - Enzo CACERES, Fri Aug 9 12:35:50 2019 +0200 : ex01
+568e5a4503b431ed75a1e70e1b70418d8b9807d1 - Enzo CACERES, Fri Aug 9 12:35:39 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpBwgxt5/user
+total 8
+-rw-r--r--  1 root  wheel  2753 Aug 13 19:15 __GIT_HISTORY
+drwxr-xr-x  3 root  wheel   102 Aug 13 19:15 ex00
+drwxr-xr-x  3 root  wheel   102 Aug 13 19:15 ex01
+drwxr-xr-x  3 root  wheel   102 Aug 13 19:15 ex02
+drwxr-xr-x  3 root  wheel   102 Aug 13 19:15 ex03
+drwxr-xr-x  4 root  wheel   136 Aug 13 19:15 ex04
+drwxr-xr-x  3 root  wheel   102 Aug 13 19:15 ex05
+
+/tmp/tmpBwgxt5/user/ex00:
+total 8
+-rw-r--r--  1 root  wheel  1284 Aug 13 19:15 ft_strdup.c
+
+/tmp/tmpBwgxt5/user/ex01:
+total 8
+-rw-r--r--  1 root  wheel  1213 Aug 13 19:15 ft_range.c
+
+/tmp/tmpBwgxt5/user/ex02:
+total 8
+-rw-r--r--  1 root  wheel  1296 Aug 13 19:15 ft_ultimate_range.c
+
+/tmp/tmpBwgxt5/user/ex03:
+total 8
+-rw-r--r--  1 root  wheel  2129 Aug 13 19:15 ft_strjoin.c
+
+/tmp/tmpBwgxt5/user/ex04:
+total 16
+-rw-r--r--  1 root  wheel  2420 Aug 13 19:15 ft_convert_base.c
+-rw-r--r--  1 root  wheel  1803 Aug 13 19:15 ft_convert_base2.c
+
+/tmp/tmpBwgxt5/user/ex05:
+total 8
+-rw-r--r--  1 root  wheel  2492 Aug 13 19:15 ft_split.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strdup.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_strdup.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./wabgkkl9rxpt25xgu5111dlq
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex01 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_range.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_range.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./zyg4j37zg6x7xu1owslxglt1
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex02 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_ultimate_range.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror main.c ft_ultimate_range.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./6g9ysd2tiooz80zi5ymonrcj
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex03 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_strjoin.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_strjoin.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./hsjqbuy0iojkk337k7706u7p
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex04 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_convert_base2.c ft_convert_base.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_convert_base2.c main.c ft_convert_base.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./pm8x9x9jam5urz2uge6fh0yg
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= ex05 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_split.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./6qnu3luqox89ue9sbkdb9j6z "        " "      "
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./29c4zvpg2zgss8kotuvauqrd "                 " "     "
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./7v2fm3erv94e97ehr2qb8bto "raQADWokG6" "raQADWokG6"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./98rf2uv217yyq87pkds5vlmm "lnDUYg8B7" "lnDUYg8B7"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./kjbcztxly3s673wifj0b4jzo "W5zpsb7EO3fLQ2o9YrOH7U9DU 251RMIuC4" " uyD       hN"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./rzait5ir23xi0uavq9k1l2j0 "CgJrbCcmjAnulg5Y2fTN     fs      9Wkf4pW0f qhPay" "Ttors"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./ug9m52rq0hoqo15d5rod9fvo "YXmuwhC1beuAToDotOM5iXkR4        neOnrMFgORi" "E7"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./1w1vwekyybmjlzun8gk6d1dl "oGGGdcBpNoGt7ap imBmKK   hdzbJBUDm0f" "SOWFfvl"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./vepdjctg0z3egi8yeopa2evp "58qvdBG bs2QSpp9UFL      qp0uLhENPVIE3lOEubkHIRV2btD" "wiE15     "
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./03w959vnoccl4t2nkrhn01vk "Lsi8qQ LJmGsjVWGaTgM9ak4sjUNiddwNWQHb " "1wOXRbA"
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./2ws14dcu76tvhzoe9lr7d6xb "  gh  " " gh"
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./827lfiqkca74bm6gt9j3c0fz "  gh  " " "
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./jcitikinwmnybpuatincmit8 "mm534HNU93Gt6keGLXz3zosR PMN12KH6a8W61" ""
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= Final grade: 100 =============================================================

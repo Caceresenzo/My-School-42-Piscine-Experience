@@ -55,14 +55,14 @@ int		ft_compute_final_length(char **strings, int size, int sep_length)
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int		sep_length;
 	int		full_length;
 	int		index;
 	char	*read_head;
 	char	*string;
 
-	sep_length = ft_str_length(sep);
-	full_length = ft_compute_final_length(strs, size, sep_length);
+	if (size == 0)
+		return ((char *)malloc(sizeof(char)));
+	full_length = ft_compute_final_length(strs, size, ft_str_length(sep));
 	if (!(string = (char *)malloc((full_length + 1) * sizeof(char))))
 		return (0);
 	read_head = string;
@@ -74,7 +74,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		if (index < size - 1)
 		{
 			ft_strcpy(read_head, sep);
-			read_head += sep_length;
+			read_head += ft_str_length(sep);
 		}
 		index++;
 	}

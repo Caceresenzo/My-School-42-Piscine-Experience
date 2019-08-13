@@ -27,7 +27,7 @@ int		ft_ultimate_range(int **range, int min, int max)
 	if ((buffer = malloc(bound * sizeof(int))) == NULL)
 	{
 		*range = 0;
-		return (0);
+		return (-1);
 	}
 	*range = buffer;
 	index = 0;
