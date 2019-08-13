@@ -13,6 +13,7 @@
 NAME=libft.a
 SOURCES=./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c ./srcs/ft_strlen.c ./srcs/ft_swap.c
 OBJECTS=ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
+OBJECTS_MOVED=./srcs/ft_putchar.o ./srcs/ft_putstr.o ./srcs/ft_strcmp.o ./srcs/ft_strlen.o ./srcs/ft_swap.o
 SOURCES_FOLDER=srcs
 HEADERS_FOLDER=includes
 
@@ -20,8 +21,8 @@ all : libft.a
 
 libft.a :
 	gcc -I$(HEADERS_FOLDER) -c -Wall -Wextra -Werror $(SOURCES)
-	ar -rcs $(NAME) $(OBJECTS)
 	mv $(OBJECTS) $(SOURCES_FOLDER)
+	ar -rcs $(NAME) $(OBJECTS_MOVED)
 
 re : fclean all
 
@@ -29,4 +30,4 @@ fclean : clean
 	rm -f $(NAME)
 
 clean :
-	find $(SOURCES_FOLDER) -name "*.o" -type f -maxdepth 1 -delete
+	rm -f $(OBJECTS_MOVED)

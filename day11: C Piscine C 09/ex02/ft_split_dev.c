@@ -75,8 +75,10 @@ int		add_part(char **entry, char *previous, int size, char *charset)
 		previous++;
 		size--;
 	}
-	*entry = (char *)malloc((size + 1) * sizeof(char));
+	*entry = (char *)malloc((size + 3) * sizeof(char));
 	ft_strncpy(*entry, previous, size);
+	(*entry)[size] = '\0';
+	(*entry)[size + 1] = '\0';
 	return (1);
 }
 
@@ -107,13 +109,15 @@ char	**ft_split(char *str, char *charset)
 	return (array);
 }
 
-int		main(void)
+int		main(int argc, char **argv)
 {
 	int		index;
 	char	**split;
 
+	argc = argc + 0;
 	printf("count occ: %d\n", count_occur("  a  b   b   ", " a   "));
-	split = ft_split("hello world", "l ");
+	//split = ft_split("ImtmVrV6Ov8QrkGGUglBy7Vgsu iIsdl5XyT35Czv4xeu", "yenORYQ");
+	split = ft_split(argv[1], argv[2]);
 	index = 0;
 	printf("tab start\n");
 	while (split[index])

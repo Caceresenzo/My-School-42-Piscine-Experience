@@ -1,0 +1,470 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r11p5.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Tue Aug 13 17:40:41 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_09/ecaceres2
+
+= Git history ==================================================================
+$> git -C /tmp/tmp4R_iNR/user log --pretty='%H - %an, %ad : %s'
+9db0baa032656e4654155e4b52add36f423b3b24 - Enzo CACERES, Tue Aug 13 15:03:29 2019 +0200 : ex02_2
+400ac03acc51e61ca21ca6ba33fbe289bdff7996 - Enzo CACERES, Tue Aug 13 15:03:05 2019 +0200 : ex01_2
+261006306e1a7f392df9a75d8d4e1654ef531a55 - Enzo CACERES, Mon Aug 12 17:31:04 2019 +0200 : ex02
+0699d066e77b2b816fe6918147fed13490a8511a - Enzo CACERES, Mon Aug 12 17:28:07 2019 +0200 : ex01
+5f3c973bf79e0c6e0d4f0d871a82d9d11b324313 - Enzo CACERES, Mon Aug 12 17:27:48 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp4R_iNR/user
+total 8
+-rw-r--r--  1 root  wheel  1398 Aug 13 17:40 __GIT_HISTORY
+drwxr-xr-x  8 root  wheel   272 Aug 13 17:40 ex00
+drwxr-xr-x  3 root  wheel   102 Aug 13 17:40 ex01
+drwxr-xr-x  3 root  wheel   102 Aug 13 17:40 ex02
+
+/tmp/tmp4R_iNR/user/ex00:
+total 48
+-rw-r--r--  1 root  wheel   959 Aug 13 17:40 ft_putchar.c
+-rw-r--r--  1 root  wheel   979 Aug 13 17:40 ft_putstr.c
+-rw-r--r--  1 root  wheel  1042 Aug 13 17:40 ft_strcmp.c
+-rw-r--r--  1 root  wheel   999 Aug 13 17:40 ft_strlen.c
+-rw-r--r--  1 root  wheel   962 Aug 13 17:40 ft_swap.c
+-rw-r--r--  1 root  wheel  1053 Aug 13 17:40 libft_creator.sh
+
+/tmp/tmp4R_iNR/user/ex01:
+total 8
+-rw-r--r--  1 root  wheel  1461 Aug 13 17:40 Makefile
+
+/tmp/tmp4R_iNR/user/ex02:
+total 8
+-rw-r--r--  1 root  wheel  2492 Aug 13 17:40 ft_split.c
+
+= ex00 =========================================================================
+
+$> clang -Wextra -Wall -Werror main.c -o user_exe -L. -lft
+
+$> ./user_exe
+$> diff -U 3 user_output test1.output | cat -e
+
+Diff OK :D
+Grade: 30
+
+= ex01 =========================================================================
+ft_noway.o
+includes
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putchar.o
+ft_putstr.c
+ft_putstr.o
+ft_strcmp.c
+ft_strcmp.o
+ft_strlen.c
+ft_strlen.o
+ft_swap.c
+ft_swap.o
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+NOOO
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+ft_putchar : M
+ft_putstr : 9SBkRTZkHZsIiWnA6bexW72dokgVwPIaNEHQ4EyritkgX00NYWabWLR9Yha9NjxiiiHQqOSaRmBZ0paXb0QO1Q4HQ1bJnQRpZZd9Etkhw7Bp9oSKwnCCEsRG5WRIKgPE
+ft_swap : -601147442,128961779
+ft_swap : 456796788,-1350608504
+ft_swap : -1244602861,-1841523047
+ft_swap : -532371248,-175983508
+ft_swap : 111512153,-360922056
+ft_strlen : 32
+ft_strlen : 65
+ft_strlen : 84
+ft_strlen : 76
+ft_strlen : 57
+ft_strcmp : 24
+ft_strcmp : -63
+ft_strcmp : -11
+ft_strcmp : 62
+ft_strcmp : 65
+ft_strcmp : 0
+ft_strcmp : 0
+ft_strcmp : 0
+a.out
+ft_noway.o
+includes
+libft.a
+main.c
+srcs
+
+./includes:
+ft.h
+
+./srcs:
+ft_bla.c
+ft_bla.o
+ft_putchar.c
+ft_putstr.c
+ft_strcmp.c
+ft_strlen.c
+ft_swap.c
+
+$> diff -U 3 user_output test1.output | cat -e
+--- user_output 2019-08-13 15:40:48.000000000 +0000$
++++ test1.output        2019-08-13 15:40:47.000000000 +0000$
+@@ -100,10 +100,15 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+ ft_noway.o$
+ includes$
+ libft.a$
+@@ -117,10 +122,15 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+ ft_noway.o$
+ includes$
+ libft.a$
+@@ -134,10 +144,15 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+ ft_noway.o$
+ includes$
+ libft.a$
+@@ -151,10 +166,15 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+ ft_noway.o$
+ includes$
+ libft.a$
+@@ -186,10 +206,15 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+ ft_putchar : M$
+ ft_putstr : 9SBkRTZkHZsIiWnA6bexW72dokgVwPIaNEHQ4EyritkgX00NYWabWLR9Yha9NjxiiiHQqOSaRmBZ0paXb0QO1Q4HQ1bJnQRpZZd9Etkhw7Bp9oSKwnCCEsRG5WRIKgPE$
+ ft_swap : -601147442,128961779$
+@@ -224,7 +249,12 @@$
+ ft_bla.c$
+ ft_bla.o$
+ ft_putchar.c$
++ft_putchar.o$
+ ft_putstr.c$
++ft_putstr.o$
+ ft_strcmp.c$
++ft_strcmp.o$
+ ft_strlen.c$
++ft_strlen.o$
+ ft_swap.c$
++ft_swap.o$
+
+Diff KO :(
+Grade: 0
+
+= ex02 =========================================================================
+$> /usr/bin/norminette -R CheckForbiddenSourceHeader ft_split.c | grep -E '^(Error|Warning)'
+
+$> clang -Wextra -Wall -Werror ft_split.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./j11gl9q1xefndqn7foyb87ia "                                  " "    "
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./7nzw36gdrgrptnlsbn9in8l9 "                         " "     "
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./4vdgl07xaeonh201fq9sffl5 "2rKYh" "2rKYh"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./6v1m367ledyb06inujn1567k "uXsUv" "uXsUv"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./l9ugqavvz255aqm43v9uubpq "uEvDsgt7PynUh1jB5t7      tmbPKJhI7KMv4AuMKNn7OH" " 2Tj"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./r1n1rjz1f08dpvvkaskflaxn "sdrZrFMNW2eHoZl2Yeq8kgoJiyu      vn6AzqA " "Ay"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./ei687330jc8zeilmh5co83bv "jWEkJqDZ4IGefV6hGE2ZhsOWCwcVJPmvDm       P       BJIvh" " dHjQn8Y"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./5mu8qvngtul9hitnwsa3nymr "H8L1ybnYc        V0DCIix5lHdnb2WzbKUh6N0Qpd" "AsZkWRK"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./elhqpyrt86uelqgpac0lo4eg "XEWnt a3IfuHzq3IdUPwKm5g XqL5uaqjhfjEZQBVyT9osWd" "Vm"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./nwo4i6pptupgl77rlwdr90hr "w9UNwRdXmR81A1FEN7l5lrlHPn       dId" "3sYQOIeC"
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./cywuz13hvg143g1o5qscvolo "  gh  " " gh"
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./zxcwg0qv4dxmvsigew8wfycg "  gh  " " "
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./4txpsw8urbvgbpw948ejmbit "vnyh Oc8VLb5GIDIQ 7o     Nd2 X t4lcF2gQtINBah" ""
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+Grade: 40
+
+= Final grade: 30 ==============================================================

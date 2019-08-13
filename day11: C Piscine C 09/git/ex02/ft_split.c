@@ -74,8 +74,10 @@ int		add_part(char **entry, char *previous, int size, char *charset)
 		previous++;
 		size--;
 	}
-	*entry = (char *)malloc((size + 1) * sizeof(char));
+	*entry = (char *)malloc((size + 3) * sizeof(char));
 	ft_strncpy(*entry, previous, size);
+	(*entry)[size] = '\0';
+	(*entry)[size + 1] = '\0';
 	return (1);
 }
 

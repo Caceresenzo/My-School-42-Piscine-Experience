@@ -1,0 +1,6 @@
+
+Hi,
+
+You have been graded 30 on C Piscine C 09:
+
+ex00: OK | ex01: KO | ex02: OK
