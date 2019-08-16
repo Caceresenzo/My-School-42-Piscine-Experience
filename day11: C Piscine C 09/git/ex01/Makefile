@@ -10,24 +10,34 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
-SOURCES=./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c ./srcs/ft_strlen.c ./srcs/ft_swap.c
-OBJECTS=ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
-OBJECTS_MOVED=./srcs/ft_putchar.o ./srcs/ft_putstr.o ./srcs/ft_strcmp.o ./srcs/ft_strlen.o ./srcs/ft_swap.o
-SOURCES_FOLDER=srcs
-HEADERS_FOLDER=includes
+SRCS	= srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c srcs/ft_swap.c
+OBJS	= ${SRCS:.c=.o}
+INCS	= includes
+NAME	= libft.a
+LIBC	= ar rc
+LIBR	= ranlib
+CC		= gcc
+RM		= rm -f
+CFLAGS	= -Wall -Wextra -Werror
 
-all : libft.a
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I${INCS}
 
-libft.a :
-	gcc -I$(HEADERS_FOLDER) -c -Wall -Wextra -Werror $(SOURCES)
-	mv $(OBJECTS) $(SOURCES_FOLDER)
-	ar -rcs $(NAME) $(OBJECTS_MOVED)
+${NAME}: ${OBJS}
+	${LIBC} ${NAME} ${OBJS}
+	${LIBR} ${NAME}
 
-re : fclean all
+all: ${NAME}
 
-fclean : clean
-	rm -f $(NAME)
+clean:
+	${RM} ${OBJS}
 
-clean :
-	rm -f $(OBJECTS_MOVED)
+fclean: clean
+	${RM} ${NAME}
+
+re: fclean all
+
+norm :
+	norminette -R CheckForbiddenSourceHeader */*.[ch]
+
+.PHONY: all clean fclean re .c.o norm
