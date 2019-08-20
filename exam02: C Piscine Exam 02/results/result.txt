@@ -1,0 +1,27 @@
+Hello ecaceres,
+
+Your exam session for the project "C Piscine Exam 02" has just been marked as finished by the exam system.
+The assignment subjects, grading traces, and the contents of your turn-in repository are attached to this email.
+
+
+Start time: 16/08/2019 16:00:55 UTC
+End time: 16/08/2019 17:49:54 UTC
+Mode: real
+Final grade: 100/100
+
+Assignments:
+  Level 6:
+    0: ft_split for 16 potential points (Success)
+    0: ft_range for 14 potential points (Success)
+    0: ft_atoi for 14 potential points (Success)
+    0: inter for 14 potential points (Success)
+    1: first_word for 14 potential points (Success)
+    0: first_word for 14 potential points (Failure)
+    0: ft_strlen for 14 potential points (Success)
+    0: aff_a for 14 potential points (Success)
+
+
+
+Automated regards,
+
+42's exam system
