@@ -1,0 +1,6 @@
+		
+Hi,
+
+You have been graded 0 on C Piscine BSQ:
+
+basic_tests: Two parameters KO | functional_tests: Test 1 KO

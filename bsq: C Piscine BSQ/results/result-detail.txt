@@ -1,0 +1,233 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r4p22.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Thu Aug 22 12:14:23 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_bsq/ecaceres
+
+= Git history ==================================================================
+$> git -C /tmp/tmppmWXA9/user log --pretty='%H - %an, %ad : %s'
+52ec6f59ce32274f80e7075b885fa0c26d450d7e - Enzo CACERES, Wed Aug 21 21:36:09 2019 +0200 : Final push: Removed debug files
+1d07a107ffe0e4c4490f9dbd28caca8627b6701e - Enzo CACERES, Wed Aug 21 21:29:39 2019 +0200 : Fixed bugs
+52413893adbab19b8dc6336c1d11fbd51b6096b7 - Enzo CACERES, Wed Aug 21 20:27:17 2019 +0200 : Merged
+71d325889675983cd898ca375b10c3cf4d0274f6 - Enzo CACERES, Wed Aug 21 20:21:16 2019 +0200 : FIXED
+11bbddeb67f6f8100c7e83cfc20479d316ef9458 - Florian YUSUF ALI, Wed Aug 21 20:17:31 2019 +0200 : CE COMMIT MARCHE MAIS IL FAUT ENLEVER LES TESTS ET srcs/bsq_print_debug.c
+66fa01d629235a4134d78e5675d4d4b26525e132 - Florian YUSUF ALI, Wed Aug 21 19:58:44 2019 +0200 : Putting files in right directories
+b857f3feedcc6008203cb26f162d2ec4884d44dc - Florian YUSUF ALI, Wed Aug 21 19:53:55 2019 +0200 : Added some tests and re-working on code
+a20412bf2d320970e0ec0b453c2dd7ba4c90e52c - Enzo CACERES, Wed Aug 21 19:10:52 2019 +0200 : FIXED FUCKING EVERYTHING
+a79067a39964a17aade4ed62cfc122df0a16c4d8 - Enzo CACERES, Wed Aug 21 13:23:18 2019 +0200 : Added makefile test
+a45b672e77f4c971bbb7dafdbcf9a67566a44359 - Florian YUSUF ALI, Wed Aug 21 11:59:36 2019 +0200 : Florian's homework
+15a88a45accc13899133d8995324bc5bd48794c9 - Florian YUSUF ALI, Wed Aug 21 01:24:46 2019 +0200 : Late cleaning up accomplished
+62b705a166657d6cb1d0c85643cf2aa63ea32b77 - Florian YUSUF ALI, Wed Aug 21 00:57:57 2019 +0200 : Some cleaning up
+5f02c22d30f3a8dc2752773eda9bccbc01936e04 - Enzo CACERES, Tue Aug 20 22:40:17 2019 +0200 : Fixed code and norm
+c1a0d148bf5561319fe427470a2ba3c5e73c9ec3 - Florian YUSUF ALI, Tue Aug 20 21:53:12 2019 +0200 : Merging test branch with master
+47d3d760bdf86d8640e78c38ea387df83474d5d8 - Florian YUSUF ALI, Tue Aug 20 21:41:24 2019 +0200 : changed to UINT and to working without strings v1.0
+0d64bbad6e83b2c27bb9e3c8b350c4cb332f362b - Enzo CACERES, Tue Aug 20 18:40:05 2019 +0200 : Optimized printing
+e1fbabbd8edd73bffdfba07e9e2468a24b47bfb4 - Florian YUSUF ALI, Tue Aug 20 16:30:50 2019 +0200 : changed to UINT and to working without strings v0.2 : SEGFAULT
+586fff0e380087158af69909287fbd780931e16d - Florian YUSUF ALI, Tue Aug 20 15:14:39 2019 +0200 : changed to UINT and to working without strings v0.1
+b2d51565dac6de768fb1e4b206bf4a3331e99d28 - Florian YUSUF ALI, Tue Aug 20 13:26:07 2019 +0200 : Cleaning up in Enzo's libraries
+01209ba4d464b742c549c26497b78f0144d22cc4 - Enzo CACERES, Mon Aug 19 20:41:34 2019 +0200 : Added test cases
+17bbb1c67ad64725144fb440103ef11abe321195 - Enzo CACERES, Mon Aug 19 20:36:30 2019 +0200 : Fixed bug: showing "map error" to stdout instead of stderr
+c7eb1e777ff9b724137bad663d76a379b7a31ddd - Enzo CACERES, Mon Aug 19 20:35:09 2019 +0200 : Fixed bug: no column map
+11b376fa79cad929e7bdc411e3843703ab962492 - Enzo CACERES, Mon Aug 19 20:31:13 2019 +0200 : Added subject
+7e824dfd17c9fce8bcb82c2b04bf8ebde2a3b081 - Enzo CACERES, Mon Aug 19 20:30:51 2019 +0200 : Norm and fixed memory leaks
+b6bf0241442383211dd2a810caafbfea644b3a12 - Enzo CACERES, Mon Aug 19 19:59:05 2019 +0200 : Added final print function
+641d7369009dc54736f1daec605e246064e386a2 - Florian YUSUF ALI, Mon Aug 19 19:47:54 2019 +0200 : Removed 'entre autres' ft_str_write.c
+081ab1be12c929558875240538256e1cc5d60589 - Enzo CACERES, Mon Aug 19 19:31:41 2019 +0200 : Closing fd
+08fd5228763271fe82c9d4941f93fbfae1664849 - Enzo CACERES, Mon Aug 19 19:23:20 2019 +0200 : Added profiler makefile rule
+61fa8acf5a7dcdc4bdec444ab8fb0a09197ab72c - Florian YUSUF ALI, Mon Aug 19 19:22:54 2019 +0200 : Removed ft_file_utils.h
+efe706b67fbd71c52fb013213660001ee1bc545f - Florian YUSUF ALI, Mon Aug 19 19:02:09 2019 +0200 : Solution.c version 1.01
+f8bdef2524ea5ed464abc66284a4dfb875383387 - Florian YUSUF ALI, Mon Aug 19 18:22:48 2019 +0200 : Solution.c version 1.01beta
+f64c816933066c5ad01e9994725ff48067f91349 - Enzo CACERES, Mon Aug 19 18:15:41 2019 +0200 : Norm and stdin support
+44c5fee5c26215613bc581940c4ca82b9f9e3f8c - Florian YUSUF ALI, Mon Aug 19 17:39:03 2019 +0200 : Solution.c v0.1 beta
+411077c4967d53a45ff331a0897c4adc9c83f7e8 - Enzo CACERES, Mon Aug 19 16:55:42 2019 +0200 : Added debug print
+eccb87cb63d94b71a9d56d2421e65e547bc64612 - Florian YUSUF ALI, Mon Aug 19 15:39:08 2019 +0200 : Re-polishing bsq_grid.c
+6d109e0ab9bd18bf24b527ad409317cbf7cb228b - Florian YUSUF ALI, Mon Aug 19 15:38:11 2019 +0200 : Polishing bsq_grid.c
+b9afd86be85177e48cee27ce9e0728b22598f84a - Florian YUSUF ALI, Mon Aug 19 15:36:26 2019 +0200 : Calling find_solution from bsq_grid.c
+6ab613b57dd014892180e2600e11f3229fb41cfa - Florian YUSUF ALI, Mon Aug 19 15:33:55 2019 +0200 : Phony commit before pull
+4c653de2f04ba62cf6717a048f21d390dd877c7f - Enzo CACERES, Mon Aug 19 15:32:09 2019 +0200 : Added fonctional reading and parsing grid system
+bcf5c6bec57708ea2b260b0762995e8c7c309d8a - Florian YUSUF ALI, Mon Aug 19 13:45:51 2019 +0200 : Renamed grid to map for clarity in .h
+8c9c09a201c45dedd81c16ae1cdc7bcf6b33d7ed - Florian YUSUF ALI, Mon Aug 19 13:42:24 2019 +0200 : Stashing for pull
+52c54e0c2944d11a71b205aaad0e5979354921a7 - Florian YUSUF ALI, Mon Aug 19 13:33:37 2019 +0200 : Draft solution.c
+74b75d2f2c4e3223414187ac2b15a1b63aa0c173 - Enzo CACERES, Mon Aug 19 13:30:17 2019 +0200 : Changed grid size to height and width
+b12730e6559cdb1a1a3a87df2f54abc8c2071a32 - Florian YUSUF ALI, Mon Aug 19 13:26:22 2019 +0200 : Files in the right directory
+c3a9f89757de9cc51246c903e35afa1a6408ea6f - Florian YUSUF ALI, Mon Aug 19 13:24:32 2019 +0200 : Updated .h
+b0e90e0d848dcd2bb47570ea824295d4dc920272 - Florian YUSUF ALI, Mon Aug 19 12:37:02 2019 +0200 : Enzo is too quick
+6be4112d66df9121693ac3d2c84089ed4da583eb - Enzo CACERES, Mon Aug 19 12:36:14 2019 +0200 : Added loading function, but not complete
+2da8c4ab5385761d1bee4106137314fa0bd374ec - Enzo CACERES, Mon Aug 19 12:11:54 2019 +0200 : Added base library
+d7342e78a3ab74c51d06d2be092f995536145f7e - Enzo CACERES, Mon Aug 19 12:11:46 2019 +0200 : Added author file
+cd71b51245a7d0d6e3e2a867bbc0444b98f21cb6 - Florian YUSUF ALI, Mon Aug 19 12:06:47 2019 +0200 : Principal functions in .h
+66e7a1a59591a98e55feecc8ec91f9c60b769246 - Florian YUSUF ALI, Mon Aug 19 11:59:26 2019 +0200 : .h draft
+86ce821bda4f6a432fded66453adc0f811dadf50 - Enzo CACERES, Mon Aug 19 12:01:49 2019 +0200 : Added Makefile
+787f499192f6970d7c70809cf0aead09603b96b3 - Enzo CACERES, Mon Aug 19 11:58:33 2019 +0200 : First commit
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmppmWXA9/user
+total 104
+-rwxr-xr-x  1 root  wheel   3715 Aug 22 12:14 Makefile
+-rw-r--r--  1 root  wheel  42965 Aug 22 12:14 __GIT_HISTORY
+-rwxr-xr-x  1 root  wheel     17 Aug 22 12:14 auteur
+drwxr-xr-x  6 root  wheel    204 Aug 22 12:14 includes
+drwxr-xr-x  8 root  wheel    272 Aug 22 12:14 srcs
+drwxr-xr-x  6 root  wheel    204 Aug 22 12:14 tests
+
+/tmp/tmppmWXA9/user/includes:
+total 32
+-rwxr-xr-x  1 root  wheel  2051 Aug 22 12:14 bsq.h
+-rwxr-xr-x  1 root  wheel   978 Aug 22 12:14 ft_bool.h
+-rwxr-xr-x  1 root  wheel  1240 Aug 22 12:14 solution.h
+-rwxr-xr-x  1 root  wheel  1247 Aug 22 12:14 utilities.h
+
+/tmp/tmppmWXA9/user/srcs:
+total 48
+-rwxr-xr-x  1 root  wheel  1608 Aug 22 12:14 bsq_grid.c
+-rwxr-xr-x  1 root  wheel  2904 Aug 22 12:14 bsq_parse.c
+-rwxr-xr-x  1 root  wheel  1378 Aug 22 12:14 bsq_parse2.c
+-rwxr-xr-x  1 root  wheel  1491 Aug 22 12:14 main.c
+-rwxr-xr-x  1 root  wheel  2713 Aug 22 12:14 solution.c
+-rwxr-xr-x  1 root  wheel  1793 Aug 22 12:14 utilities.c
+
+/tmp/tmppmWXA9/user/tests:
+total 16
+drwxr-xr-x  26 root  wheel  884 Aug 22 12:14 cases
+-rwxr-xr-x   1 root  wheel  384 Aug 22 12:14 grid_generator.perl
+-rwxr-xr-x   1 root  wheel  115 Aug 22 12:14 grid_set_generator.sh
+drwxr-xr-x  12 root  wheel  408 Aug 22 12:14 set
+
+/tmp/tmppmWXA9/user/tests/cases:
+total 56832
+-rwxr-xr-x  1 root  wheel   4002008 Aug 22 12:14 big
+-rwxr-xr-x  1 root  wheel         0 Aug 22 12:14 empty_map
+-rw-r--r--  1 root  wheel  25005008 Aug 22 12:14 grid_w5000_h5000_d1000
+-rwxr-xr-x  1 root  wheel         6 Aug 22 12:14 invalid_map
+-rw-r--r--  1 root  wheel       114 Aug 22 12:14 map_with_invalid_header
+-rw-r--r--  1 root  wheel       113 Aug 22 12:14 map_with_invalid_header2
+-rw-r--r--  1 root  wheel       109 Aug 22 12:14 map_with_invalid_header3
+-rw-r--r--  1 root  wheel       119 Aug 22 12:14 map_with_invalid_header4
+-rw-r--r--  1 root  wheel       148 Aug 22 12:14 map_with_invalid_height_longer
+-rw-r--r--  1 root  wheel        93 Aug 22 12:14 map_with_invalid_height_shorter
+-rw-r--r--  1 root  wheel       116 Aug 22 12:14 map_with_irregular_width
+-rw-r--r--  1 root  wheel       114 Aug 22 12:14 map_with_irregular_width2
+-rwxr-xr-x  1 root  wheel         7 Aug 22 12:14 no_colomn_line
+-rw-r--r--  1 root  wheel         7 Aug 22 12:14 one_by_one_empty
+-rw-r--r--  1 root  wheel         7 Aug 22 12:14 one_by_one_filled
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_colomn_line
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_colomn_line2
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_colomn_line3
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_colomn_line4
+-rwxr-xr-x  1 root  wheel        11 Aug 22 12:14 one_line_colomn
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_line_colomn1
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_line_colomn2
+-rwxr-xr-x  1 root  wheel         9 Aug 22 12:14 one_line_colomn3
+-rw-r--r--  1 root  wheel        11 Aug 22 12:14 two_by_two
+
+/tmp/tmppmWXA9/user/tests/set:
+total 80
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_1
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_10
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_2
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_3
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_4
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_5
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_6
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_7
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_8
+-rw-r--r--  1 root  wheel  116 Aug 22 12:14 grid_9
+
+= basic_tests ==================================================================
+$> /usr/bin/norminette  srcs/bsq_grid.c includes/ft_bool.h srcs/bsq_parse2.c srcs/solution.c includes/utilities.h srcs/main.c srcs/utilities.c srcs/bsq_parse.c includes/bsq.h includes/solution.h | grep -E '^(Error|Warning)'
+
+$> make clean && make && make fclean && make && make clean && ls -la bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+gcc -Wall -Wextra -Werror -g -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/solution.c -o srcs/solution.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/utilities.c -o srcs/utilities.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse.c -o srcs/bsq_parse.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse2.c -o srcs/bsq_parse2.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_grid.c -o srcs/bsq_grid.o -Iincludes
+gcc -Wall -Wextra -Werror -g ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o -o bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+rm -f bsq
+gcc -Wall -Wextra -Werror -g -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/solution.c -o srcs/solution.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/utilities.c -o srcs/utilities.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse.c -o srcs/bsq_parse.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse2.c -o srcs/bsq_parse2.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_grid.c -o srcs/bsq_grid.o -Iincludes
+gcc -Wall -Wextra -Werror -g ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o -o bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+-rwxr-xr-x  1 deepthought  deepthought  16116 Aug 22 10:14 bsq
+
+Testing one parameter
+$> ./ref_bsq testbasic1
+$> ./bsq testbasic1
+$> diff -U 3 user_output ref_output | cat -e
+
+Diff OK :D
+Testing two parameters
+$> ./ref_bsq testbasic1 testbasic2
+$> ./bsq testbasic1 testbasic2
+$> diff -U 3 user_output ref_output | cat -e
+--- user_output 2019-08-22 10:14:33.000000000 +0000$
++++ ref_output  2019-08-22 10:14:33.000000000 +0000$
+@@ -1,2 +1,3 @@$
+ X$
+ $
++o$
+
+Diff KO :(
+User output differs from reference output !
+Grade: 0
+
+= functional_tests =============================================================
+$> /usr/bin/norminette  srcs/bsq_grid.c includes/ft_bool.h srcs/bsq_parse2.c srcs/solution.c includes/utilities.h srcs/main.c srcs/utilities.c srcs/bsq_parse.c includes/bsq.h includes/solution.h | grep -E '^(Error|Warning)'
+
+$> make clean && make && make fclean && make && make clean && ls -la bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+gcc -Wall -Wextra -Werror -g -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/solution.c -o srcs/solution.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/utilities.c -o srcs/utilities.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse.c -o srcs/bsq_parse.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse2.c -o srcs/bsq_parse2.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_grid.c -o srcs/bsq_grid.o -Iincludes
+gcc -Wall -Wextra -Werror -g ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o -o bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+rm -f bsq
+gcc -Wall -Wextra -Werror -g -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/solution.c -o srcs/solution.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/utilities.c -o srcs/utilities.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse.c -o srcs/bsq_parse.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_parse2.c -o srcs/bsq_parse2.o -Iincludes
+gcc -Wall -Wextra -Werror -g -c srcs/bsq_grid.c -o srcs/bsq_grid.o -Iincludes
+gcc -Wall -Wextra -Werror -g ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o -o bsq
+rm -f ./srcs/main.o ./srcs/solution.o ./srcs/utilities.o ./srcs/bsq_parse.o ./srcs/bsq_parse2.o ./srcs/bsq_grid.o
+-rwxr-xr-x  1 deepthought  deepthought  16116 Aug 22 10:14 bsq
+
+= Test 1 ===================================================
+$> ./9azzx3ju8lh0a9858k3k8k5d < test1.stdin
+$> diff -U 3 user_output_test1 test1.output | cat -e
+--- user_output_test1   2019-08-22 10:14:36.000000000 +0000$
++++ test1.output        2019-08-22 10:14:36.000000000 +0000$
+@@ -0,0 +1 @@$
++o$
+
+Diff KO :(
+KO
+Grade: 0
+
+= Final grade: 0 ===============================================================
