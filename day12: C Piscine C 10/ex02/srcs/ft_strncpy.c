@@ -10,19 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <stdio.h>
+
+char	*ft_str_sized_copy(char *dest, char *src, unsigned int src_size)
 {
 	unsigned int	index;
 
 	index = 0;
-	while (index < n && src[index] != '\0')
+	while (index < src_size)
 	{
 		dest[index] = src[index];
-		index++;
-	}
-	while (index < n)
-	{
-		dest[index] = '\0';
 		index++;
 	}
 	return (dest);

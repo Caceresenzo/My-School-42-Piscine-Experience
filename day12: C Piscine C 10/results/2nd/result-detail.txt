@@ -1,0 +1,481 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e3r2p21.42.fr
+Darwin 16.7.0 x86_64
+$> date
+Thu Aug 22 14:55:20 CEST 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: intra/2019/activities/c_piscine_c_10/ecaceres2
+
+= Git history ==================================================================
+$> git -C /tmp/tmpxPOEV9/user log --pretty='%H - %an, %ad : %s'
+5b9cc648e94b079ee74301c769e09b47a7dae886 - Enzo CACERES, Thu Aug 22 13:04:35 2019 +0200 : ex02_2
+a97eb51370b78f9b5d9c42367def977a61f4583f - Enzo CACERES, Fri Aug 16 13:56:10 2019 +0200 : ex03
+20dc2ef2e48a87837436e0b73b6ae423d64cb405 - Enzo CACERES, Fri Aug 16 13:56:02 2019 +0200 : ex02
+d9e1b7bdd677924abbf5856335a67804fcddd939 - Enzo CACERES, Fri Aug 16 13:55:54 2019 +0200 : ex01
+54954b972883254700829a62cc0b359e6c1323f4 - Enzo CACERES, Fri Aug 16 13:55:42 2019 +0200 : ex00
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmpxPOEV9/user
+total 16
+-rw-r--r--  1 root  wheel  4099 Aug 22 14:55 __GIT_HISTORY
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 ex00
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 ex01
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 ex02
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 ex03
+
+/tmp/tmpxPOEV9/user/ex00:
+total 8
+-rw-r--r--  1 root  wheel  2242 Aug 22 14:55 Makefile
+drwxr-xr-x  3 root  wheel   102 Aug 22 14:55 includes
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 srcs
+
+/tmp/tmpxPOEV9/user/ex00/includes:
+total 8
+-rw-r--r--  1 root  wheel  1313 Aug 22 14:55 display_file.h
+
+/tmp/tmpxPOEV9/user/ex00/srcs:
+total 24
+-rw-r--r--  1 root  wheel  1406 Aug 22 14:55 display_file.c
+-rw-r--r--  1 root  wheel  1347 Aug 22 14:55 main.c
+-rw-r--r--  1 root  wheel  1001 Aug 22 14:55 string_utils.c
+
+/tmp/tmpxPOEV9/user/ex01:
+total 16
+-rw-r--r--  1 root  wheel  4505 Aug 22 14:55 Makefile
+drwxr-xr-x  3 root  wheel   102 Aug 22 14:55 includes
+drwxr-xr-x  5 root  wheel   170 Aug 22 14:55 srcs
+
+/tmp/tmpxPOEV9/user/ex01/includes:
+total 8
+-rw-r--r--  1 root  wheel  1127 Aug 22 14:55 cat.h
+
+/tmp/tmpxPOEV9/user/ex01/srcs:
+total 24
+-rw-r--r--  1 root  wheel  2129 Aug 22 14:55 cat.c
+-rw-r--r--  1 root  wheel  1048 Aug 22 14:55 main.c
+-rw-r--r--  1 root  wheel  1001 Aug 22 14:55 string_utils.c
+
+/tmp/tmpxPOEV9/user/ex02:
+total 16
+-rw-r--r--   1 root  wheel  8040 Aug 22 14:55 Makefile
+drwxr-xr-x  11 root  wheel   374 Aug 22 14:55 includes
+drwxr-xr-x  12 root  wheel   408 Aug 22 14:55 srcs
+
+/tmp/tmpxPOEV9/user/ex02/includes:
+total 72
+-rw-r--r--  1 root  wheel   974 Aug 22 14:55 ft_abs.h
+-rw-r--r--  1 root  wheel  1350 Aug 22 14:55 ft_args_parser.h
+-rw-r--r--  1 root  wheel   974 Aug 22 14:55 ft_atoi.h
+-rw-r--r--  1 root  wheel  1155 Aug 22 14:55 ft_console_io.h
+-rw-r--r--  1 root  wheel  1058 Aug 22 14:55 ft_is.h
+-rw-r--r--  1 root  wheel  1015 Aug 22 14:55 ft_strncpy.h
+-rw-r--r--  1 root  wheel  1233 Aug 22 14:55 ft_tail.h
+-rw-r--r--  1 root  wheel  1035 Aug 22 14:55 ft_tail_out.h
+-rw-r--r--  1 root  wheel  1153 Aug 22 14:55 ft_tail_utils.h
+
+/tmp/tmpxPOEV9/user/ex02/srcs:
+total 80
+-rw-r--r--  1 root  wheel  1001 Aug 22 14:55 ft_abs.c
+-rw-r--r--  1 root  wheel  3024 Aug 22 14:55 ft_args_parser.c
+-rw-r--r--  1 root  wheel  1289 Aug 22 14:55 ft_atoi.c
+-rw-r--r--  1 root  wheel  1289 Aug 22 14:55 ft_console_io.c
+-rw-r--r--  1 root  wheel  1182 Aug 22 14:55 ft_is.c
+-rw-r--r--  1 root  wheel  1107 Aug 22 14:55 ft_strncpy.c
+-rw-r--r--  1 root  wheel  1864 Aug 22 14:55 ft_tail.c
+-rw-r--r--  1 root  wheel  2217 Aug 22 14:55 ft_tail_out.c
+-rw-r--r--  1 root  wheel  2280 Aug 22 14:55 ft_tail_utils.c
+-rw-r--r--  1 root  wheel  1056 Aug 22 14:55 main.c
+
+/tmp/tmpxPOEV9/user/ex03:
+total 16
+-rw-r--r--   1 root  wheel  6565 Aug 22 14:55 Makefile
+drwxr-xr-x  10 root  wheel   340 Aug 22 14:55 includes
+drwxr-xr-x  12 root  wheel   408 Aug 22 14:55 srcs
+
+/tmp/tmpxPOEV9/user/ex03/includes:
+total 64
+-rw-r--r--  1 root  wheel  1314 Aug 22 14:55 ft_args_parser.h
+-rw-r--r--  1 root  wheel  1155 Aug 22 14:55 ft_console_io.h
+-rw-r--r--  1 root  wheel  1074 Aug 22 14:55 ft_dumper.h
+-rw-r--r--  1 root  wheel  1018 Aug 22 14:55 ft_equal.h
+-rw-r--r--  1 root  wheel  1367 Aug 22 14:55 ft_file_utils.h
+-rw-r--r--  1 root  wheel  1089 Aug 22 14:55 ft_hexdump.h
+-rw-r--r--  1 root  wheel  1001 Aug 22 14:55 ft_strncpy.h
+-rw-r--r--  1 root  wheel  1160 Aug 22 14:55 ft_write_number.h
+
+/tmp/tmpxPOEV9/user/ex03/srcs:
+total 80
+-rw-r--r--  1 root  wheel  2581 Aug 22 14:55 ft_args_parser.c
+-rw-r--r--  1 root  wheel  1289 Aug 22 14:55 ft_console_io.c
+-rw-r--r--  1 root  wheel  2871 Aug 22 14:55 ft_dumper.c
+-rw-r--r--  1 root  wheel  1138 Aug 22 14:55 ft_equal_buffer.c
+-rw-r--r--  1 root  wheel  2841 Aug 22 14:55 ft_file_utils.c
+-rw-r--r--  1 root  wheel  1254 Aug 22 14:55 ft_file_utils2.c
+-rw-r--r--  1 root  wheel  1534 Aug 22 14:55 ft_hexdump.c
+-rw-r--r--  1 root  wheel  1146 Aug 22 14:55 ft_strncpy.c
+-rw-r--r--  1 root  wheel  1591 Aug 22 14:55 ft_write_number.c
+-rw-r--r--  1 root  wheel  1035 Aug 22 14:55 main.c
+
+= ex00 =========================================================================
+$> /usr/bin/norminette  srcs/main.c srcs/display_file.c srcs/string_utils.c includes/display_file.h | grep -E '^(Error|Warning)'
+
+$> make clean && make && make fclean && make && make clean && ls -la ft_display_file
+rm -f ./srcs/main.o ./srcs/display_file.o ./srcs/string_utils.o
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/display_file.c -o srcs/display_file.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/string_utils.c -o srcs/string_utils.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/main.o ./srcs/display_file.o ./srcs/string_utils.o -o ft_display_file
+rm -f ./srcs/main.o ./srcs/display_file.o ./srcs/string_utils.o
+rm -f ft_display_file
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/display_file.c -o srcs/display_file.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/string_utils.c -o srcs/string_utils.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/main.o ./srcs/display_file.o ./srcs/string_utils.o -o ft_display_file
+rm -f ./srcs/main.o ./srcs/display_file.o ./srcs/string_utils.o
+-rwxr-xr-x  1 deepthought  deepthought  8836 Aug 22 12:55 ft_display_file
+
+= Test 1 ===================================================
+$> ./ptd5kmcs2hqlvyv0mu5wkms2 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./8z8bskwvk0c1w41tjolnmq1p  pouet pouic
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./asgzfu37r4at24u4qdo7m2hy  doesnt_exist
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./1do7l48dde30f0fsloqdhj1d  ./test4.output
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./v0autmk83kcz9wiw46l1lerk  ./test5.output
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./dg9tw13wg93n05noj5im2uir  ./test6.output
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./5mdogb8xatkrbgthxn2pk7xb  ./test7.output
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./emnly1zvunffkb9h3cclr3kw  ./test8.output
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./zmslkpym6exx6vuw1xc5pg3c  ./test9.output
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./uad8woqpnhuvfoetnzenw17v  ./test10.output
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./cil8g2kgf0u7tbbrugiuhmb3  ./test11.output
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./ih7yz0bul6jcr62hpwybuih2  ./test12.output
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./jgjqopd2fp45fqzpyhu3v7nr  ./test13.output
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./clftpvgm4tlq4houv82h489o  ./test14.output
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./a7ryanchpq590bywlkmtwdy5  ./test15.output
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+Grade: 15
+
+= ex01 =========================================================================
+$> /usr/bin/norminette  srcs/main.c srcs/cat.c includes/cat.h srcs/string_utils.c | grep -E '^(Error|Warning)'
+
+$> make clean && make && make fclean && make && make clean && ls -la ft_cat
+rm -f ./srcs/main.o ./srcs/cat.o ./srcs/string_utils.o
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/cat.c -o srcs/cat.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/string_utils.c -o srcs/string_utils.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/main.o ./srcs/cat.o ./srcs/string_utils.o -o ft_cat
+rm -f ./srcs/main.o ./srcs/cat.o ./srcs/string_utils.o
+rm -f ft_cat
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/cat.c -o srcs/cat.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/string_utils.c -o srcs/string_utils.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/main.o ./srcs/cat.o ./srcs/string_utils.o -o ft_cat
+rm -f ./srcs/main.o ./srcs/cat.o ./srcs/string_utils.o
+-rwxr-xr-x  1 deepthought  deepthought  9052 Aug 22 12:55 ft_cat
+
+= Test 1 ===================================================
+$> ulimit -s 100; ./zdxzneh4xniydgpc348h0r36 
+$> ulimit -s 100; ./zdxzneh4xniydgpc348h0r36 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ulimit -s 100; ./sbjxbr72act1lyasxgd8ks86  < test2.stdin
+$> ulimit -s 100; ./sbjxbr72act1lyasxgd8ks86  < test2.stdin
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ulimit -s 100; ./rksm887g363qq7xy0sksar0p  < test3.stdin
+$> ulimit -s 100; ./rksm887g363qq7xy0sksar0p  < test3.stdin
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ulimit -s 100; ./wkvglkxqe7piej7ihtesb1ia  generated1.test generated0.test generated0.test
+$> ulimit -s 100; ./wkvglkxqe7piej7ihtesb1ia  generated1.test generated0.test generated0.test
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ulimit -s 100; ./w6i8bxnpl5bwjylyrdd2tg5a  generated4.test generated2.test generated1.test yololoQBQOoYioQpGxgrcxDsqTJfEsGKpKtsl
+$> ulimit -s 100; ./w6i8bxnpl5bwjylyrdd2tg5a  generated4.test generated2.test generated1.test yololoQBQOoYioQpGxgrcxDsqTJfEsGKpKtsl
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ulimit -s 100; ./szv7k29w45a337e74obmxf4u  generated4.test generated0.test generated3.test generated0.test
+$> ulimit -s 100; ./szv7k29w45a337e74obmxf4u  generated4.test generated0.test generated3.test generated0.test
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ulimit -s 100; ./235ov3ki7wdflqo3w62k1zbf  generated7.test generated3.test generated7.test generated3.test generated1.test generated1.test generated4.test
+$> ulimit -s 100; ./235ov3ki7wdflqo3w62k1zbf  generated7.test generated3.test generated7.test generated3.test generated1.test generated1.test generated4.test
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ulimit -s 100; ./hks494tvfr35fvoi9tyql6q5  generated2.test generated5.test generated6.test yololoMo generated2.test generated0.test generated3.test
+$> ulimit -s 100; ./hks494tvfr35fvoi9tyql6q5  generated2.test generated5.test generated6.test yololoMo generated2.test generated0.test generated3.test
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ulimit -s 100; ./eta0blwo4uuvoopa31yir32y  yololorRoIbsLtwvPZHBMotMaStl generated3.test generated1.test generated5.test generated2.test generated7.test generated4.test
+$> ulimit -s 100; ./eta0blwo4uuvoopa31yir32y  yololorRoIbsLtwvPZHBMotMaStl generated3.test generated1.test generated5.test generated2.test generated7.test generated4.test
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ulimit -s 100; ./a8qs2x53fipv4d6hed5x3ghx  generated0.test generated9.test generated2.test generated7.test generated4.test generated7.test
+$> ulimit -s 100; ./a8qs2x53fipv4d6hed5x3ghx  generated0.test generated9.test generated2.test generated7.test generated4.test generated7.test
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ulimit -s 100; ./xdi6ahpcpa10uqedvhv4ubg6  generated3.test generated8.test generated6.test generated1.test generated6.test generated0.test generated6.test
+$> ulimit -s 100; ./xdi6ahpcpa10uqedvhv4ubg6  generated3.test generated8.test generated6.test generated1.test generated6.test generated0.test generated6.test
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ulimit -s 100; ./zplhsx1zoqyv1kw3geb4zv2h  generated1.test
+$> ulimit -s 100; ./zplhsx1zoqyv1kw3geb4zv2h  generated1.test
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ulimit -s 100; ./9uprie65x0nr1pxxg76tjzgx  generated0.test generated5.test generated10.test
+$> ulimit -s 100; ./9uprie65x0nr1pxxg76tjzgx  generated0.test generated5.test generated10.test
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ulimit -s 100; ./7jpls6j1cu0rkzmyel3inhea  generated5.test generated5.test generated12.test generated0.test generated13.test generated8.test generated1.test generated8.test generated13.test generated5.test
+$> ulimit -s 100; ./7jpls6j1cu0rkzmyel3inhea  generated5.test generated5.test generated12.test generated0.test generated13.test generated8.test generated1.test generated8.test generated13.test generated5.test
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ulimit -s 100; ./lezgxpp5xvpm2b6bpmkpe6sp  generated1.test generated0.test generated2.test generated7.test generated9.test generated14.test
+$> ulimit -s 100; ./lezgxpp5xvpm2b6bpmkpe6sp  generated1.test generated0.test generated2.test generated7.test generated9.test generated14.test
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+= Test 16 ==================================================
+$> ulimit -s 100; ./dfb4tyr6o5c41soqy1v6xyv2  generated4.test generated1.test generated6.test generated3.test
+$> ulimit -s 100; ./dfb4tyr6o5c41soqy1v6xyv2  generated4.test generated1.test generated6.test generated3.test
+$> diff -U 3 user_output_test16 test16.output | cat -e
+
+Diff OK :D
+= Test 17 ==================================================
+$> ulimit -s 100; ./45s90uyk8jkd3rksblwb0cul  generated16.test generated6.test generated17.test generated8.test generated3.test generated14.test generated13.test generated1.test generated2.test generated1.test generated15.test generated5.test generated9.test generated4.test generated7.test generated12.test generated11.test
+$> ulimit -s 100; ./45s90uyk8jkd3rksblwb0cul  generated16.test generated6.test generated17.test generated8.test generated3.test generated14.test generated13.test generated1.test generated2.test generated1.test generated15.test generated5.test generated9.test generated4.test generated7.test generated12.test generated11.test
+$> diff -U 3 user_output_test17 test17.output | cat -e
+
+Diff OK :D
+= Test 18 ==================================================
+$> ulimit -s 100; ./cgykp593q54rdcqdd5yqq3bs  generated2.test generated5.test yololoJqlGPrLNYwUrVhkoDdVNjGzfoCHxHXPCGVFYYVJzCstklz generated11.test generated4.test generated17.test generated9.test generated9.test yololowSPGScUdpROsgTnsJsvLPera generated18.test generated10.test generated16.test generated5.test
+$> ulimit -s 100; ./cgykp593q54rdcqdd5yqq3bs  generated2.test generated5.test yololoJqlGPrLNYwUrVhkoDdVNjGzfoCHxHXPCGVFYYVJzCstklz generated11.test generated4.test generated17.test generated9.test generated9.test yololowSPGScUdpROsgTnsJsvLPera generated18.test generated10.test generated16.test generated5.test
+$> diff -U 3 user_output_test18 test18.output | cat -e
+
+Diff OK :D
+= Test 19 ==================================================
+$> ulimit -s 100; ./0pjseqp6rcw1241icek15n8a  generated2.test generated10.test generated9.test generated16.test generated13.test generated5.test generated0.test generated14.test generated3.test generated14.test generated18.test
+$> ulimit -s 100; ./0pjseqp6rcw1241icek15n8a  generated2.test generated10.test generated9.test generated16.test generated13.test generated5.test generated0.test generated14.test generated3.test generated14.test generated18.test
+$> diff -U 3 user_output_test19 test19.output | cat -e
+
+Diff OK :D
+= Test 20 ==================================================
+$> ulimit -s 100; ./75hmq9rlw7kg51ww3j1qcfir
+$> ulimit -s 100; ./75hmq9rlw7kg51ww3j1qcfir
+$> diff -U 3 user_output_test20 test20.output | cat -e
+
+Diff OK :D
+Grade: 20
+
+= ex02 =========================================================================
+$> /usr/bin/norminette  srcs/ft_is.c includes/ft_strncpy.h srcs/ft_atoi.c srcs/ft_args_parser.c srcs/ft_abs.c srcs/ft_tail_out.c srcs/ft_tail_utils.c srcs/ft_tail.c includes/ft_tail.h includes/ft_abs.h includes/ft_tail_out.h includes/ft_is.h srcs/main.c includes/ft_tail_utils.h includes/ft_atoi.h includes/ft_args_parser.h srcs/ft_strncpy.c includes/ft_console_io.h srcs/ft_console_io.c | grep -E '^(Error|Warning)'
+Error (line 37): Empty line
+Error (line 41): function tail_by_lines has 27 lines
+Error (line 52): C++ comment
+
+Norme check FAILED
+Grade: 0
+
+= ex03 =========================================================================
+$> /usr/bin/norminette  includes/ft_file_utils.h includes/ft_strncpy.h includes/ft_equal.h srcs/ft_write_number.c srcs/main.c srcs/ft_file_utils.c srcs/ft_file_utils2.c srcs/ft_console_io.c srcs/ft_dumper.c includes/ft_hexdump.h includes/ft_args_parser.h includes/ft_write_number.h srcs/ft_args_parser.c srcs/ft_hexdump.c srcs/ft_equal_buffer.c srcs/ft_strncpy.c includes/ft_dumper.h includes/ft_console_io.h | grep -E '^(Error|Warning)'
+
+$> make clean && make && make fclean && make && make clean && ls -la ft_hexdump
+rm -f ./srcs/ft_args_parser.o ./srcs/ft_console_io.o ./srcs/ft_dumper.o ./srcs/ft_equal_buffer.o ./srcs/ft_file_utils.o ./srcs/ft_file_utils2.o ./srcs/ft_hexdump.o ./srcs/ft_strncpy.o ./srcs/ft_write_number.o ./srcs/main.o
+gcc -Wall -Wextra -Werror -c srcs/ft_args_parser.c -o srcs/ft_args_parser.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_console_io.c -o srcs/ft_console_io.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_dumper.c -o srcs/ft_dumper.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_equal_buffer.c -o srcs/ft_equal_buffer.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_file_utils.c -o srcs/ft_file_utils.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_file_utils2.c -o srcs/ft_file_utils2.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_hexdump.c -o srcs/ft_hexdump.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_strncpy.c -o srcs/ft_strncpy.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_write_number.c -o srcs/ft_write_number.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/ft_args_parser.o ./srcs/ft_console_io.o ./srcs/ft_dumper.o ./srcs/ft_equal_buffer.o ./srcs/ft_file_utils.o ./srcs/ft_file_utils2.o ./srcs/ft_hexdump.o ./srcs/ft_strncpy.o ./srcs/ft_write_number.o ./srcs/main.o -o ft_hexdump
+rm -f ./srcs/ft_args_parser.o ./srcs/ft_console_io.o ./srcs/ft_dumper.o ./srcs/ft_equal_buffer.o ./srcs/ft_file_utils.o ./srcs/ft_file_utils2.o ./srcs/ft_hexdump.o ./srcs/ft_strncpy.o ./srcs/ft_write_number.o ./srcs/main.o
+rm -f ft_hexdump
+gcc -Wall -Wextra -Werror -c srcs/ft_args_parser.c -o srcs/ft_args_parser.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_console_io.c -o srcs/ft_console_io.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_dumper.c -o srcs/ft_dumper.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_equal_buffer.c -o srcs/ft_equal_buffer.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_file_utils.c -o srcs/ft_file_utils.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_file_utils2.c -o srcs/ft_file_utils2.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_hexdump.c -o srcs/ft_hexdump.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_strncpy.c -o srcs/ft_strncpy.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/ft_write_number.c -o srcs/ft_write_number.o -Iincludes
+gcc -Wall -Wextra -Werror -c srcs/main.c -o srcs/main.o -Iincludes
+gcc -Wall -Wextra -Werror ./srcs/ft_args_parser.o ./srcs/ft_console_io.o ./srcs/ft_dumper.o ./srcs/ft_equal_buffer.o ./srcs/ft_file_utils.o ./srcs/ft_file_utils2.o ./srcs/ft_hexdump.o ./srcs/ft_strncpy.o ./srcs/ft_write_number.o ./srcs/main.o -o ft_hexdump
+rm -f ./srcs/ft_args_parser.o ./srcs/ft_console_io.o ./srcs/ft_dumper.o ./srcs/ft_equal_buffer.o ./srcs/ft_file_utils.o ./srcs/ft_file_utils2.o ./srcs/ft_hexdump.o ./srcs/ft_strncpy.o ./srcs/ft_write_number.o ./srcs/main.o
+-rwxr-xr-x  1 deepthought  deepthought  14524 Aug 22 12:56 ft_hexdump
+
+= Test 1 ===================================================
+$> ./nyjs0gemoiayo7ff2qihl2nf -C
+$> ./nyjs0gemoiayo7ff2qihl2nf -C
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./qefs8awh8aufkqmcx8qholk8 
+$> ./qefs8awh8aufkqmcx8qholk8 
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./whs0jtn543odtn0bp2urr6xa  < test3.stdin
+$> ./whs0jtn543odtn0bp2urr6xa  < test3.stdin
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./i49pv39m3w7maj22a2gmk3gj  < test4.stdin
+$> ./i49pv39m3w7maj22a2gmk3gj  < test4.stdin
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./oar56wymhbgrr7797pizlqu1 -C < test5.stdin
+$> ./oar56wymhbgrr7797pizlqu1 -C < test5.stdin
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./6wg9ikhafq8akg20fyorxy6s -C yosjhdskjsdhvLQHnAozhvWKybgerzwU hdjhsdkjVVPpPDTUZCMmFaeshPzQapZzESVUbsjkDessXzqqtzkCtEBDQnBkoCuBSoCKKYSs
+$> ./6wg9ikhafq8akg20fyorxy6s -C yosjhdskjsdhvLQHnAozhvWKybgerzwU hdjhsdkjVVPpPDTUZCMmFaeshPzQapZzESVUbsjkDessXzqqtzkCtEBDQnBkoCuBSoCKKYSs
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./8pae44wq7zzp83ost3g7gbzj -C  generated2.test generated7.test generated0.test generated7.test generated4.test generated5.test
+$> ./8pae44wq7zzp83ost3g7gbzj -C  generated2.test generated7.test generated0.test generated7.test generated4.test generated5.test
+$> diff -U 3 user_output_test7 test7.output | cat -e
+--- user_output_test7   2019-08-22 12:56:29.000000000 +0000$
++++ test7.output        2019-08-22 12:56:29.000000000 +0000$
+@@ -1,7 +1,4 @@$
+ 8pae44wq7zzp83ost3g7gbzj: generated2.test: No such file or directory$
+-8pae44wq7zzp83ost3g7gbzj: generated0.test: No such file or directory$
+-8pae44wq7zzp83ost3g7gbzj: generated4.test: No such file or directory$
+-8pae44wq7zzp83ost3g7gbzj: generated5.test: No such file or directory$
+ 00000000  43 57 0d 3a 57 65 0b 43  4f 44 32 7d 76 3c 37 70  |CW.:We.COD2}v<7p|$
+ 00000010  42 7a 0d 6a 0a 4b 2e 7c  6e 62 0a 24 60 0b 6a 6e  |Bz.j.K.|nb.$`.jn|$
+ 00000020  38 26 7c 75 22 4c 20 22  48 77 0d 0a 6d 2c 41 65  |8&|u"L "Hw..m,Ae|$
+@@ -621,6 +618,7 @@$
+ 00002680  68 6d 25 74 51 4d 2b 64  39 50 72 75 38 7e 40 67  |hm%tQM+d9Pru8~@g|$
+ 00002690  44 59 6b 22 42 38 42 2e  47 4c 44 4a 52 29 7e 54  |DYk"B8B.GLDJR)~T|$
+ 000026a0  27 75 69 2e 0d 6b 60 64  51 41 6a 5f 24 22 70 61  |'ui..k`dQAj_$"pa|$
++8pae44wq7zzp83ost3g7gbzj: generated0.test: No such file or directory$
+ 000026b0  7b 60 24 3c 30 47 56 68  30 43 57 0d 3a 57 65 0b  |{`$<0GVh0CW.:We.|$
+ 000026c0  43 4f 44 32 7d 76 3c 37  70 42 7a 0d 6a 0a 4b 2e  |COD2}v<7pBz.j.K.|$
+ 000026d0  7c 6e 62 0a 24 60 0b 6a  6e 38 26 7c 75 22 4c 20  ||nb.$`.jn8&|u"L |$
+@@ -1241,5 +1239,7 @@$
+ 00004d40  64 39 50 72 75 38 7e 40  67 44 59 6b 22 42 38 42  |d9Pru8~@gDYk"B8B|$
+ 00004d50  2e 47 4c 44 4a 52 29 7e  54 27 75 69 2e 0d 6b 60  |.GLDJR)~T'ui..k`|$
+ 00004d60  64 51 41 6a 5f 24 22 70  61 7b 60 24 3c 30 47 56  |dQAj_$"pa{`$<0GV|$
++8pae44wq7zzp83ost3g7gbzj: generated4.test: No such file or directory$
++8pae44wq7zzp83ost3g7gbzj: generated5.test: No such file or directory$
+ 00004d70  68 30                                             |h0|$
+ 00004d72$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 35 ==============================================================
+
+

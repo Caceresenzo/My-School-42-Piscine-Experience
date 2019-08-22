@@ -58,26 +58,25 @@ void	show_error(char *executable, char *path)
 	errno = 0;
 }
 
-char	*read_full(int fd)
+char	*read_full(int fd, unsigned long *total_read)
 {
-	unsigned int	total_read;
 	unsigned int	byte_read;
 	char			buffer[DEFAULT_BUFFER_SIZE];
 	char			*old;
 	char			*dest;
 
-	total_read = 0;
+	*total_read = 0;
 	dest = malloc(0);
 	while ((byte_read = read(fd, buffer, DEFAULT_BUFFER_SIZE)) != 0)
 	{
 		if (errno != 0)
 			return (dest);
 		old = dest;
-		if (!(dest = malloc((total_read + byte_read) * sizeof(char *))))
+		if (!(dest = malloc((*total_read + byte_read) * sizeof(char))))
 			return (0);
-		ft_strncpy(dest, old, total_read);
-		ft_strncpy(dest + total_read, buffer, byte_read);
-		total_read += byte_read;
+		ft_str_sized_copy(dest, old, *total_read);
+		ft_str_sized_copy(dest + *total_read, buffer, byte_read);
+		*total_read += byte_read;
 		free(old);
 	}
 	return (dest);

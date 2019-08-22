@@ -21,54 +21,67 @@
 #include "ft_tail_utils.h"
 #include "ft_console_io.h"
 
-void	tail_by_lines(int fd)
+int		count_line(unsigned long byte_read, char *content)
 {
-	unsigned int	index;
+	unsigned long	index;
 	int				line_count;
-	char			*content;
-	char			*last_line;
 
 	index = 0;
 	line_count = 0;
-	content = read_full(fd);
-	while (content[index])
-		if (content[index++] == '\n' && content[index] != '\0')
-			line_count++;
-	index = 0;
-	while (*content)
+	while (index < byte_read)
 	{
-		if (*content == '\n')
+		if (content[index] == '\n' && index != byte_read - 1)
+			line_count++;
+		index++;
+	}
+
+	return (line_count);
+}
+
+void	tail_by_lines(int fd)
+{
+	unsigned long	byte_read;
+	unsigned long	index;
+	int				line_count;
+	char			*content;
+	unsigned int	last_index;
+
+	content = read_full(fd, &byte_read);
+	line_count = count_line(byte_read, content);
+	index = 0;
+//	printf("line %d\n", line_count);
+	while (index < byte_read)
+	{
+		if (content[index] == '\n')
 		{
-			if (++index > (unsigned int)(line_count - DEFAULT_LINE_COUNT + 1))
+			if (--line_count < DEFAULT_LINE_COUNT)
 			{
-				write_str_out(last_line);
+				while (index < byte_read - 1)
+				{
+					write(1, content + index + 1, 1);
+					index++;
+				}
 				break ;
 			}
-			last_line = content + 1;
+			last_index = index + 1;
 		}
-		content++;
+		index++;
 	}
 }
 
 void	tail_by_byte_count(int fd, unsigned int byte_to_read)
 {
-	unsigned int	index;
-	unsigned int	byte_read;
+	unsigned long	index;
+	unsigned long	byte_read;
 	char			*content;
 
+	content = read_full(fd, &byte_read);
 	index = 0;
-	byte_read = 0;
-	content = read_full(fd);
-	while (content[index++])
-		byte_read++;
-	index = 0;
-	while (*content)
+	while (index < byte_read - byte_to_read)
+		index++;
+	while (index < byte_read)
 	{
-		if (index++ > byte_read - byte_to_read - 1)
-		{
-			write_str_out(content);
-			break ;
-		}
-		content++;
+		write(1, content + index, 1);
+		index++;
 	}
 }
