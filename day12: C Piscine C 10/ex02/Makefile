@@ -42,7 +42,7 @@ norm :
 
 re : fclean all
 
-test : #re
+test : re
 	@echo "[$(C_YELLOW_B)TESTING$(C_RESET)] $(C_LIGHT_RED_B)[ SHOULD NOT HAVE DIFF ]$(C_RESET) $(C_WHITE)Single file: ./srcs/ft_abs.c$(C_RESET)" ;
 	@tail ./srcs/ft_abs.c > result-off.txt ;
 	@./ft_tail ./srcs/ft_abs.c > result-usr.txt ;

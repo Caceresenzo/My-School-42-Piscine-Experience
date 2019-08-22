@@ -34,7 +34,6 @@ int		count_line(unsigned long byte_read, char *content)
 			line_count++;
 		index++;
 	}
-
 	return (line_count);
 }
 
@@ -48,9 +47,8 @@ void	tail_by_lines(int fd)
 
 	content = read_full(fd, &byte_read);
 	line_count = count_line(byte_read, content);
-	index = 0;
-//	printf("line %d\n", line_count);
-	while (index < byte_read)
+	index = -1;
+	while (++index < byte_read)
 	{
 		if (content[index] == '\n')
 		{
@@ -65,7 +63,6 @@ void	tail_by_lines(int fd)
 			}
 			last_index = index + 1;
 		}
-		index++;
 	}
 }
 
